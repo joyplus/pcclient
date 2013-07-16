@@ -329,5 +329,11 @@ namespace PCHelper
             addressContent = addressTextBox.Text;
             sendPicBox.Focus();
         }
+
+        private void sendPicBox_Click(object sender, EventArgs e)
+        {
+            SendForm sendForm = new SendForm();
+            sendForm.ShowDialog();
+        }
     }
 }

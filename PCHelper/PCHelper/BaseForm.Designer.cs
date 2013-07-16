@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseForm));
             this.pcPanel = new System.Windows.Forms.Panel();
             this.cloudPanel = new System.Windows.Forms.Panel();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.sendPicBox = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,9 +62,6 @@
             this.logo = new System.Windows.Forms.PictureBox();
             this.headerPicture = new System.Windows.Forms.PictureBox();
             this.menuBgPic = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.addressTextBox = new System.Windows.Forms.TextBox();
             this.pcPanel.SuspendLayout();
             this.cloudPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sendPicBox)).BeginInit();
@@ -120,6 +120,40 @@
             this.cloudPanel.TabIndex = 4;
             this.cloudPanel.Visible = false;
             // 
+            // addressTextBox
+            // 
+            this.addressTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.addressTextBox.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressTextBox.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.addressTextBox.Location = new System.Drawing.Point(238, 321);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(299, 17);
+            this.addressTextBox.TabIndex = 7;
+            this.addressTextBox.Text = "请输入要播放的视频地址";
+            this.addressTextBox.Enter += new System.EventHandler(this.addressTextBox_Enter);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Location = new System.Drawing.Point(234, 291);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(576, 19);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "目前支持优酷、爱奇艺、腾讯、乐视、搜狐、M1905电影网以及网络文件地址和直播员地址";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(232, 258);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(123, 30);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "视频云推送";
+            // 
             // sendPicBox
             // 
             this.sendPicBox.Image = global::PCHelper.Properties.Resources.btn_send;
@@ -128,6 +162,7 @@
             this.sendPicBox.Size = new System.Drawing.Size(300, 40);
             this.sendPicBox.TabIndex = 4;
             this.sendPicBox.TabStop = false;
+            this.sendPicBox.Click += new System.EventHandler(this.sendPicBox_Click);
             this.sendPicBox.MouseLeave += new System.EventHandler(this.sendPicBox_MouseLeave);
             this.sendPicBox.MouseHover += new System.EventHandler(this.sendPicBox_MouseHover);
             // 
@@ -422,40 +457,6 @@
             this.menuBgPic.Size = new System.Drawing.Size(900, 44);
             this.menuBgPic.TabIndex = 6;
             this.menuBgPic.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(232, 258);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 30);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "视频云推送";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(234, 291);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(576, 19);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "目前支持优酷、爱奇艺、腾讯、乐视、搜狐、M1905电影网以及网络文件地址和直播员地址";
-            // 
-            // addressTextBox
-            // 
-            this.addressTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.addressTextBox.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressTextBox.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.addressTextBox.Location = new System.Drawing.Point(238, 321);
-            this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(299, 17);
-            this.addressTextBox.TabIndex = 7;
-            this.addressTextBox.Text = Properties.Resources.address_placeholder;
-            this.addressTextBox.Enter += new System.EventHandler(this.addressTextBox_Enter);
             // 
             // BaseForm
             // 
