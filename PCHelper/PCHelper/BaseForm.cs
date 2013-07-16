@@ -19,11 +19,12 @@ namespace PCHelper
         public const int WM_SYSCOMMAND = 0x0112;
         public const int SC_MOVE = 0xF010;
         public const int HTCAPTION = 0x0002;
-
-        
+        private int SELECTED_INDEX = 0;
+        private string addressContent;
         public BaseForm()
         {
             InitializeComponent();
+            addressTextBox.LostFocus += new System.EventHandler(addressTextBox_LostFocus);
         }
 
         private void BaseForm_Load(object sender, EventArgs e)
@@ -36,14 +37,15 @@ namespace PCHelper
             pcPictureBox.Location = new Point(0, 0);
             pcPictureBox.Parent = menuBgPic;
 
-            cloudPictureBox.Location = new Point(140 + 3, 0);
+            cloudPictureBox.Location = new Point(140, 0);
             cloudPictureBox.Parent = menuBgPic;
 
-            keyPictureBox.Location = new Point((140 + 2) * 2 + 1, 0);
+            keyPictureBox.Location = new Point((140) * 2, 0);
             keyPictureBox.Parent = menuBgPic;
 
             pcPanel.Parent = this;
             cloudPanel.Parent = this;
+            cloudPanel.Location = pcPanel.Location;
             sharePicBox.Parent = pcPanel;
 
             pictureBox_Min.Image = null;
@@ -152,11 +154,31 @@ namespace PCHelper
 
         private void pcPictureBox_Click(object sender, EventArgs e)
         {
+            SELECTED_INDEX = 0;
+            removeAddressTextBoxFocus();
+            this.pcPictureBox.Image = Properties.Resources.btn_pc_pressed;
+            this.cloudPictureBox.Image = Properties.Resources.btn_cloud;
+            this.keyPictureBox.Image = Properties.Resources.btn_key;
             switchPanel((PictureBox)sender);
         }
 
         private void cloudPictureBox_Click(object sender, EventArgs e)
         {
+            SELECTED_INDEX = 1;
+            this.pcPictureBox.Image = Properties.Resources.btn_pc;
+            this.cloudPictureBox.Image = Properties.Resources.btn_cloud_pressed;
+            this.keyPictureBox.Image = Properties.Resources.btn_key;
+            switchPanel((PictureBox)sender);
+        }
+
+
+        private void keyPictureBox_Click(object sender, EventArgs e)
+        {
+            SELECTED_INDEX = 2;
+            removeAddressTextBoxFocus();
+            this.pcPictureBox.Image = Properties.Resources.btn_pc;
+            this.cloudPictureBox.Image = Properties.Resources.btn_cloud;
+            this.keyPictureBox.Image = Properties.Resources.btn_key_pressed;
             switchPanel((PictureBox)sender);
         }
 
@@ -164,18 +186,35 @@ namespace PCHelper
         {
             if (menuBtn.Name == "pcPictureBox")
             {
-                changePanelVisable(true, false);
+                changePanelVisable(true, false, false);
             }
             else if (menuBtn.Name == "cloudPictureBox")
             {
-                changePanelVisable(false, true);
+                changePanelVisable(false, true, false);
+            }
+            else if (menuBtn.Name == "keyPictureBox")
+            {
+                changePanelVisable(false, false, true);
             }
         }
 
-        private void changePanelVisable(bool pcPanelVisable, bool cloudPanelVisable)
+        private void changePanelVisable(bool pcPanelVisable, bool cloudPanelVisable, bool keyPanelVisable)
         {
             this.pcPanel.Visible = pcPanelVisable;
             this.cloudPanel.Visible = cloudPanelVisable;
+            if (cloudPanelVisable)
+            {
+                if (addressContent == null || addressContent == "")
+                {
+                    addressTextBox.Text = Properties.Resources.address_placeholder;
+                    removeAddressTextBoxFocus();
+                }
+                else
+                {
+                    addressTextBox.Text = addressContent;
+                    addressTextBox.SelectionStart = addressTextBox.TextLength; 
+                }
+            }
         }
 
         private void versionLabel_Paint(object sender, PaintEventArgs e)
@@ -188,6 +227,107 @@ namespace PCHelper
         {
             commentLabel.Location = new Point(720, 10);
             bottomPicBox.Controls.Add(commentLabel);
+        }
+
+        private void pcPictureBox_MouseHover(object sender, EventArgs e)
+        {
+            if (SELECTED_INDEX == 0)
+            {
+                this.pcPictureBox.Image = Properties.Resources.btn_pc_pressed;
+            }
+            else
+            {
+                this.pcPictureBox.Image = Properties.Resources.btn_pc_selected;
+            }
+        }
+
+        private void pcPictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            if (SELECTED_INDEX == 0)
+            {
+                this.pcPictureBox.Image = Properties.Resources.btn_pc_pressed;
+            }
+            else
+            {
+                this.pcPictureBox.Image = Properties.Resources.btn_pc;
+            }
+        }
+
+        private void cloudPictureBox_MouseHover(object sender, EventArgs e)
+        {
+            if (SELECTED_INDEX == 1)
+            {
+                this.cloudPictureBox.Image = Properties.Resources.btn_cloud_pressed;
+            }
+            else
+            {
+                this.cloudPictureBox.Image = Properties.Resources.btn_cloud_selected;
+            }
+        }
+
+        private void cloudPictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            if (SELECTED_INDEX == 1)
+            {
+                this.cloudPictureBox.Image = Properties.Resources.btn_cloud_pressed;
+            }
+            else
+            {
+                this.cloudPictureBox.Image = Properties.Resources.btn_cloud;
+            }
+        }
+
+        private void keyPictureBox_MouseHover(object sender, EventArgs e)
+        {
+            if (SELECTED_INDEX == 2)
+            {
+                this.keyPictureBox.Image = Properties.Resources.btn_key_pressed;
+            }
+            else
+            {
+                this.keyPictureBox.Image = Properties.Resources.btn_key_selected;
+            }
+        }
+
+        private void keyPictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            if (SELECTED_INDEX == 2)
+            {
+                this.keyPictureBox.Image = Properties.Resources.btn_key_pressed;
+            }
+            else
+            {
+                this.keyPictureBox.Image = Properties.Resources.btn_key;
+            }
+        }
+
+        private void sendPicBox_MouseHover(object sender, EventArgs e)
+        {
+            this.sendPicBox.Image = Properties.Resources.btn_send_pressed;
+        }
+
+        private void sendPicBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.sendPicBox.Image = Properties.Resources.btn_send;
+        }
+
+        private void addressTextBox_Enter(object sender, EventArgs e)
+        {
+            addressTextBox.Text = "";         
+        }
+
+        private void addressTextBox_LostFocus(object sender, System.EventArgs e)
+        {
+            if (addressTextBox.Text == "")
+            {
+                addressTextBox.Text = Properties.Resources.address_placeholder;
+            }
+        }
+
+        private void removeAddressTextBoxFocus()
+        {
+            addressContent = addressTextBox.Text;
+            sendPicBox.Focus();
         }
     }
 }

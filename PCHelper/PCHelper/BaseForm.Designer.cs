@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseForm));
             this.pcPanel = new System.Windows.Forms.Panel();
+            this.cloudPanel = new System.Windows.Forms.Panel();
+            this.sendPicBox = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.yunIcon = new System.Windows.Forms.PictureBox();
+            this.tuiIcon = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.addLabe = new System.Windows.Forms.Label();
@@ -37,46 +43,53 @@
             this.sharePicBox = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.cloudPanel = new System.Windows.Forms.Panel();
+            this.versionLabel = new System.Windows.Forms.Label();
+            this.commentLabel = new System.Windows.Forms.Label();
+            this.pcPictureBox = new System.Windows.Forms.PictureBox();
+            this.cloudPictureBox = new System.Windows.Forms.PictureBox();
+            this.keyPictureBox = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.bottomPicBox = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.keyPictureBox = new System.Windows.Forms.PictureBox();
-            this.cloudPictureBox = new System.Windows.Forms.PictureBox();
-            this.pcPictureBox = new System.Windows.Forms.PictureBox();
-            this.menuBgPic = new System.Windows.Forms.PictureBox();
             this.pictureBox_Close = new System.Windows.Forms.PictureBox();
             this.pictureBox_Min = new System.Windows.Forms.PictureBox();
             this.logo = new System.Windows.Forms.PictureBox();
             this.headerPicture = new System.Windows.Forms.PictureBox();
-            this.versionLabel = new System.Windows.Forms.Label();
-            this.commentLabel = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.menuBgPic = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
             this.pcPanel.SuspendLayout();
+            this.cloudPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sendPicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yunIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tuiIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sharePicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cloudPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.keyPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.keyPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cloudPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBgPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuBgPic)).BeginInit();
             this.SuspendLayout();
             // 
             // pcPanel
             // 
             this.pcPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pcPanel.Controls.Add(this.cloudPanel);
             this.pcPanel.Controls.Add(this.label4);
             this.pcPanel.Controls.Add(this.label1);
             this.pcPanel.Controls.Add(this.addLabe);
@@ -84,11 +97,79 @@
             this.pcPanel.Controls.Add(this.sharePicBox);
             this.pcPanel.Controls.Add(this.pictureBox6);
             this.pcPanel.Controls.Add(this.pictureBox5);
-            this.pcPanel.Controls.Add(this.cloudPanel);
             this.pcPanel.Location = new System.Drawing.Point(0, 125);
             this.pcPanel.Name = "pcPanel";
             this.pcPanel.Size = new System.Drawing.Size(900, 446);
             this.pcPanel.TabIndex = 5;
+            // 
+            // cloudPanel
+            // 
+            this.cloudPanel.BackColor = System.Drawing.Color.White;
+            this.cloudPanel.Controls.Add(this.addressTextBox);
+            this.cloudPanel.Controls.Add(this.label6);
+            this.cloudPanel.Controls.Add(this.label5);
+            this.cloudPanel.Controls.Add(this.sendPicBox);
+            this.cloudPanel.Controls.Add(this.label3);
+            this.cloudPanel.Controls.Add(this.label2);
+            this.cloudPanel.Controls.Add(this.yunIcon);
+            this.cloudPanel.Controls.Add(this.tuiIcon);
+            this.cloudPanel.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cloudPanel.Location = new System.Drawing.Point(60, 0);
+            this.cloudPanel.Name = "cloudPanel";
+            this.cloudPanel.Size = new System.Drawing.Size(900, 446);
+            this.cloudPanel.TabIndex = 4;
+            this.cloudPanel.Visible = false;
+            // 
+            // sendPicBox
+            // 
+            this.sendPicBox.Image = global::PCHelper.Properties.Resources.btn_send;
+            this.sendPicBox.Location = new System.Drawing.Point(237, 163);
+            this.sendPicBox.Name = "sendPicBox";
+            this.sendPicBox.Size = new System.Drawing.Size(300, 40);
+            this.sendPicBox.TabIndex = 4;
+            this.sendPicBox.TabStop = false;
+            this.sendPicBox.MouseLeave += new System.EventHandler(this.sendPicBox_MouseLeave);
+            this.sendPicBox.MouseHover += new System.EventHandler(this.sendPicBox_MouseHover);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(233, 114);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(336, 19);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "电视应用安装神器，指定APK后，即可在电视上安装";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(232, 84);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 30);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Show推";
+            // 
+            // yunIcon
+            // 
+            this.yunIcon.Image = ((System.Drawing.Image)(resources.GetObject("yunIcon.Image")));
+            this.yunIcon.Location = new System.Drawing.Point(57, 242);
+            this.yunIcon.Name = "yunIcon";
+            this.yunIcon.Size = new System.Drawing.Size(140, 140);
+            this.yunIcon.TabIndex = 1;
+            this.yunIcon.TabStop = false;
+            // 
+            // tuiIcon
+            // 
+            this.tuiIcon.Image = ((System.Drawing.Image)(resources.GetObject("tuiIcon.Image")));
+            this.tuiIcon.Location = new System.Drawing.Point(55, 75);
+            this.tuiIcon.Name = "tuiIcon";
+            this.tuiIcon.Size = new System.Drawing.Size(140, 140);
+            this.tuiIcon.TabIndex = 0;
+            this.tuiIcon.TabStop = false;
             // 
             // label4
             // 
@@ -166,14 +247,95 @@
             this.pictureBox5.TabIndex = 5;
             this.pictureBox5.TabStop = false;
             // 
-            // cloudPanel
+            // versionLabel
             // 
-            this.cloudPanel.BackColor = System.Drawing.Color.Red;
-            this.cloudPanel.Location = new System.Drawing.Point(798, 255);
-            this.cloudPanel.Name = "cloudPanel";
-            this.cloudPanel.Size = new System.Drawing.Size(900, 446);
-            this.cloudPanel.TabIndex = 4;
-            this.cloudPanel.Visible = false;
+            this.versionLabel.AutoSize = true;
+            this.versionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.versionLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.versionLabel.Location = new System.Drawing.Point(12, 579);
+            this.versionLabel.Name = "versionLabel";
+            this.versionLabel.Size = new System.Drawing.Size(41, 12);
+            this.versionLabel.TabIndex = 13;
+            this.versionLabel.Text = "版本：";
+            this.versionLabel.Paint += new System.Windows.Forms.PaintEventHandler(this.versionLabel_Paint);
+            // 
+            // commentLabel
+            // 
+            this.commentLabel.AutoSize = true;
+            this.commentLabel.BackColor = System.Drawing.Color.Transparent;
+            this.commentLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.commentLabel.Location = new System.Drawing.Point(718, 579);
+            this.commentLabel.Name = "commentLabel";
+            this.commentLabel.Size = new System.Drawing.Size(89, 12);
+            this.commentLabel.TabIndex = 14;
+            this.commentLabel.Text = "给我们提意见：";
+            this.commentLabel.Paint += new System.Windows.Forms.PaintEventHandler(this.commentLabel_Paint);
+            // 
+            // pcPictureBox
+            // 
+            this.pcPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.pcPictureBox.Image = global::PCHelper.Properties.Resources.btn_pc_pressed;
+            this.pcPictureBox.Location = new System.Drawing.Point(0, 81);
+            this.pcPictureBox.Name = "pcPictureBox";
+            this.pcPictureBox.Size = new System.Drawing.Size(140, 43);
+            this.pcPictureBox.TabIndex = 7;
+            this.pcPictureBox.TabStop = false;
+            this.pcPictureBox.Click += new System.EventHandler(this.pcPictureBox_Click);
+            this.pcPictureBox.MouseLeave += new System.EventHandler(this.pcPictureBox_MouseLeave);
+            this.pcPictureBox.MouseHover += new System.EventHandler(this.pcPictureBox_MouseHover);
+            // 
+            // cloudPictureBox
+            // 
+            this.cloudPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.cloudPictureBox.Image = global::PCHelper.Properties.Resources.btn_cloud;
+            this.cloudPictureBox.Location = new System.Drawing.Point(144, 81);
+            this.cloudPictureBox.Name = "cloudPictureBox";
+            this.cloudPictureBox.Size = new System.Drawing.Size(140, 43);
+            this.cloudPictureBox.TabIndex = 8;
+            this.cloudPictureBox.TabStop = false;
+            this.cloudPictureBox.Click += new System.EventHandler(this.cloudPictureBox_Click);
+            this.cloudPictureBox.MouseLeave += new System.EventHandler(this.cloudPictureBox_MouseLeave);
+            this.cloudPictureBox.MouseHover += new System.EventHandler(this.cloudPictureBox_MouseHover);
+            // 
+            // keyPictureBox
+            // 
+            this.keyPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.keyPictureBox.Image = global::PCHelper.Properties.Resources.btn_key;
+            this.keyPictureBox.Location = new System.Drawing.Point(286, 81);
+            this.keyPictureBox.Name = "keyPictureBox";
+            this.keyPictureBox.Size = new System.Drawing.Size(140, 43);
+            this.keyPictureBox.TabIndex = 9;
+            this.keyPictureBox.TabStop = false;
+            this.keyPictureBox.Click += new System.EventHandler(this.keyPictureBox_Click);
+            this.keyPictureBox.MouseLeave += new System.EventHandler(this.keyPictureBox_MouseLeave);
+            this.keyPictureBox.MouseHover += new System.EventHandler(this.keyPictureBox_MouseHover);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(869, 577);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox8.TabIndex = 17;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(842, 577);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox7.TabIndex = 16;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(813, 577);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox4.TabIndex = 15;
+            this.pictureBox4.TabStop = false;
             // 
             // bottomPicBox
             // 
@@ -203,47 +365,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(2, 43);
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
-            // 
-            // keyPictureBox
-            // 
-            this.keyPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.keyPictureBox.Image = global::PCHelper.Properties.Resources.btn_key;
-            this.keyPictureBox.Location = new System.Drawing.Point(286, 81);
-            this.keyPictureBox.Name = "keyPictureBox";
-            this.keyPictureBox.Size = new System.Drawing.Size(140, 43);
-            this.keyPictureBox.TabIndex = 9;
-            this.keyPictureBox.TabStop = false;
-            // 
-            // cloudPictureBox
-            // 
-            this.cloudPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.cloudPictureBox.Image = global::PCHelper.Properties.Resources.btn_cloud;
-            this.cloudPictureBox.Location = new System.Drawing.Point(144, 81);
-            this.cloudPictureBox.Name = "cloudPictureBox";
-            this.cloudPictureBox.Size = new System.Drawing.Size(140, 43);
-            this.cloudPictureBox.TabIndex = 8;
-            this.cloudPictureBox.TabStop = false;
-            this.cloudPictureBox.Click += new System.EventHandler(this.cloudPictureBox_Click);
-            // 
-            // pcPictureBox
-            // 
-            this.pcPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.pcPictureBox.Image = global::PCHelper.Properties.Resources.btn_pc;
-            this.pcPictureBox.Location = new System.Drawing.Point(0, 81);
-            this.pcPictureBox.Name = "pcPictureBox";
-            this.pcPictureBox.Size = new System.Drawing.Size(140, 43);
-            this.pcPictureBox.TabIndex = 7;
-            this.pcPictureBox.TabStop = false;
-            this.pcPictureBox.Click += new System.EventHandler(this.pcPictureBox_Click);
-            // 
-            // menuBgPic
-            // 
-            this.menuBgPic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("menuBgPic.BackgroundImage")));
-            this.menuBgPic.Location = new System.Drawing.Point(3, 81);
-            this.menuBgPic.Name = "menuBgPic";
-            this.menuBgPic.Size = new System.Drawing.Size(900, 44);
-            this.menuBgPic.TabIndex = 6;
-            this.menuBgPic.TabStop = false;
             // 
             // pictureBox_Close
             // 
@@ -293,56 +414,48 @@
             this.headerPicture.TabStop = false;
             this.headerPicture.MouseDown += new System.Windows.Forms.MouseEventHandler(this.control_MouseDown);
             // 
-            // versionLabel
+            // menuBgPic
             // 
-            this.versionLabel.AutoSize = true;
-            this.versionLabel.BackColor = System.Drawing.Color.Transparent;
-            this.versionLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.versionLabel.Location = new System.Drawing.Point(12, 579);
-            this.versionLabel.Name = "versionLabel";
-            this.versionLabel.Size = new System.Drawing.Size(41, 12);
-            this.versionLabel.TabIndex = 13;
-            this.versionLabel.Text = "版本：";
-            this.versionLabel.Paint += new System.Windows.Forms.PaintEventHandler(this.versionLabel_Paint);
+            this.menuBgPic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("menuBgPic.BackgroundImage")));
+            this.menuBgPic.Location = new System.Drawing.Point(3, 81);
+            this.menuBgPic.Name = "menuBgPic";
+            this.menuBgPic.Size = new System.Drawing.Size(900, 44);
+            this.menuBgPic.TabIndex = 6;
+            this.menuBgPic.TabStop = false;
             // 
-            // commentLabel
+            // label5
             // 
-            this.commentLabel.AutoSize = true;
-            this.commentLabel.BackColor = System.Drawing.Color.Transparent;
-            this.commentLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.commentLabel.Location = new System.Drawing.Point(718, 579);
-            this.commentLabel.Name = "commentLabel";
-            this.commentLabel.Size = new System.Drawing.Size(89, 12);
-            this.commentLabel.TabIndex = 14;
-            this.commentLabel.Text = "给我们提意见：";
-            this.commentLabel.Paint += new System.Windows.Forms.PaintEventHandler(this.commentLabel_Paint);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(232, 258);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(123, 30);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "视频云推送";
             // 
-            // pictureBox4
+            // label6
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(813, 577);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox4.TabIndex = 15;
-            this.pictureBox4.TabStop = false;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Location = new System.Drawing.Point(234, 291);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(576, 19);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "目前支持优酷、爱奇艺、腾讯、乐视、搜狐、M1905电影网以及网络文件地址和直播员地址";
             // 
-            // pictureBox7
+            // addressTextBox
             // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(842, 577);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox7.TabIndex = 16;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(869, 577);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox8.TabIndex = 17;
-            this.pictureBox8.TabStop = false;
+            this.addressTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.addressTextBox.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressTextBox.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.addressTextBox.Location = new System.Drawing.Point(238, 321);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(299, 17);
+            this.addressTextBox.TabIndex = 7;
+            this.addressTextBox.Text = Properties.Resources.address_placeholder;
+            this.addressTextBox.Enter += new System.EventHandler(this.addressTextBox_Enter);
             // 
             // BaseForm
             // 
@@ -374,23 +487,28 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.control_MouseDown);
             this.pcPanel.ResumeLayout(false);
             this.pcPanel.PerformLayout();
+            this.cloudPanel.ResumeLayout(false);
+            this.cloudPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sendPicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yunIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tuiIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sharePicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cloudPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.keyPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.keyPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cloudPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBgPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuBgPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,6 +541,14 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox yunIcon;
+        private System.Windows.Forms.PictureBox tuiIcon;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox sendPicBox;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox addressTextBox;
     }
 }
 

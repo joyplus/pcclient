@@ -60,6 +60,15 @@ namespace PCHelper.Properties {
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to 请输入要播放的视频地址.
+        /// </summary>
+        internal static string address_placeholder {
+            get {
+                return ResourceManager.GetString("address_placeholder", resourceCulture);
+            }
+        }
+        
         internal static System.Drawing.Bitmap btn_close {
             get {
                 object obj = ResourceManager.GetObject("btn_close", resourceCulture);
@@ -81,9 +90,37 @@ namespace PCHelper.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap btn_cloud_pressed {
+            get {
+                object obj = ResourceManager.GetObject("btn_cloud_pressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap btn_cloud_selected {
+            get {
+                object obj = ResourceManager.GetObject("btn_cloud_selected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap btn_key {
             get {
                 object obj = ResourceManager.GetObject("btn_key", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap btn_key_pressed {
+            get {
+                object obj = ResourceManager.GetObject("btn_key_pressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap btn_key_selected {
+            get {
+                object obj = ResourceManager.GetObject("btn_key_selected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -105,6 +142,34 @@ namespace PCHelper.Properties {
         internal static System.Drawing.Bitmap btn_pc {
             get {
                 object obj = ResourceManager.GetObject("btn_pc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap btn_pc_pressed {
+            get {
+                object obj = ResourceManager.GetObject("btn_pc_pressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap btn_pc_selected {
+            get {
+                object obj = ResourceManager.GetObject("btn_pc_selected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap btn_send {
+            get {
+                object obj = ResourceManager.GetObject("btn_send", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap btn_send_pressed {
+            get {
+                object obj = ResourceManager.GetObject("btn_send_pressed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

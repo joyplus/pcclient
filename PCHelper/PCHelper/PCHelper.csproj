@@ -108,6 +108,30 @@
   <ItemGroup>
     <None Include="Resources\共享.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\按下PC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\选中云服务.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\按下云服务.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\按下转屏钥匙.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\选中转屏钥匙.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\选中pc屏转大屏.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\选择推送-按下.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\选择推送.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
