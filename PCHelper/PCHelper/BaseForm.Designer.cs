@@ -31,7 +31,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseForm));
             this.pcPanel = new System.Windows.Forms.Panel();
             this.cloudPanel = new System.Windows.Forms.Panel();
+            this.pushPicBox = new System.Windows.Forms.PictureBox();
             this.addressTextBox = new System.Windows.Forms.TextBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.cloudPanel0 = new System.Windows.Forms.Panel();
+            this.pushListLabel = new System.Windows.Forms.Label();
+            this.pushListPicBox = new System.Windows.Forms.PictureBox();
+            this.pinTextBox = new System.Windows.Forms.TextBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.sendPicBox = new System.Windows.Forms.PictureBox();
@@ -62,8 +75,16 @@
             this.logo = new System.Windows.Forms.PictureBox();
             this.headerPicture = new System.Windows.Forms.PictureBox();
             this.menuBgPic = new System.Windows.Forms.PictureBox();
+            this.webShowkeyLabel = new System.Windows.Forms.Label();
             this.pcPanel.SuspendLayout();
             this.cloudPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pushPicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            this.cloudPanel0.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pushListPicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sendPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yunIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tuiIcon)).BeginInit();
@@ -97,7 +118,7 @@
             this.pcPanel.Controls.Add(this.sharePicBox);
             this.pcPanel.Controls.Add(this.pictureBox6);
             this.pcPanel.Controls.Add(this.pictureBox5);
-            this.pcPanel.Location = new System.Drawing.Point(0, 125);
+            this.pcPanel.Location = new System.Drawing.Point(20, 125);
             this.pcPanel.Name = "pcPanel";
             this.pcPanel.Size = new System.Drawing.Size(900, 446);
             this.pcPanel.TabIndex = 5;
@@ -105,7 +126,10 @@
             // cloudPanel
             // 
             this.cloudPanel.BackColor = System.Drawing.Color.White;
+            this.cloudPanel.Controls.Add(this.pushPicBox);
             this.cloudPanel.Controls.Add(this.addressTextBox);
+            this.cloudPanel.Controls.Add(this.pictureBox11);
+            this.cloudPanel.Controls.Add(this.cloudPanel0);
             this.cloudPanel.Controls.Add(this.label6);
             this.cloudPanel.Controls.Add(this.label5);
             this.cloudPanel.Controls.Add(this.sendPicBox);
@@ -120,17 +144,166 @@
             this.cloudPanel.TabIndex = 4;
             this.cloudPanel.Visible = false;
             // 
+            // pushPicBox
+            // 
+            this.pushPicBox.Image = global::PCHelper.Properties.Resources.btn_push;
+            this.pushPicBox.Location = new System.Drawing.Point(537, 325);
+            this.pushPicBox.Name = "pushPicBox";
+            this.pushPicBox.Size = new System.Drawing.Size(127, 40);
+            this.pushPicBox.TabIndex = 11;
+            this.pushPicBox.TabStop = false;
+            this.pushPicBox.MouseLeave += new System.EventHandler(this.pushPicBox_MouseLeave);
+            this.pushPicBox.MouseHover += new System.EventHandler(this.pushPicBox_MouseHover);
+            // 
             // addressTextBox
             // 
             this.addressTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.addressTextBox.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressTextBox.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addressTextBox.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.addressTextBox.Location = new System.Drawing.Point(238, 321);
+            this.addressTextBox.Location = new System.Drawing.Point(243, 338);
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(299, 17);
-            this.addressTextBox.TabIndex = 7;
-            this.addressTextBox.Text = "请输入要播放的视频地址";
+            this.addressTextBox.Size = new System.Drawing.Size(281, 16);
+            this.addressTextBox.TabIndex = 10;
             this.addressTextBox.Enter += new System.EventHandler(this.addressTextBox_Enter);
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(238, 325);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(300, 40);
+            this.pictureBox11.TabIndex = 9;
+            this.pictureBox11.TabStop = false;
+            // 
+            // cloudPanel0
+            // 
+            this.cloudPanel0.Controls.Add(this.webShowkeyLabel);
+            this.cloudPanel0.Controls.Add(this.pushListLabel);
+            this.cloudPanel0.Controls.Add(this.pushListPicBox);
+            this.cloudPanel0.Controls.Add(this.pinTextBox);
+            this.cloudPanel0.Controls.Add(this.pictureBox10);
+            this.cloudPanel0.Controls.Add(this.label10);
+            this.cloudPanel0.Controls.Add(this.pictureBox9);
+            this.cloudPanel0.Controls.Add(this.pictureBox1);
+            this.cloudPanel0.Controls.Add(this.label9);
+            this.cloudPanel0.Controls.Add(this.label8);
+            this.cloudPanel0.Controls.Add(this.label7);
+            this.cloudPanel0.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cloudPanel0.Location = new System.Drawing.Point(13, 0);
+            this.cloudPanel0.Name = "cloudPanel0";
+            this.cloudPanel0.Size = new System.Drawing.Size(900, 446);
+            this.cloudPanel0.TabIndex = 8;
+            this.cloudPanel0.Visible = false;
+            // 
+            // pushListLabel
+            // 
+            this.pushListLabel.AutoSize = true;
+            this.pushListLabel.Font = new System.Drawing.Font("Arial Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pushListLabel.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.pushListLabel.Location = new System.Drawing.Point(807, -9);
+            this.pushListLabel.Name = "pushListLabel";
+            this.pushListLabel.Size = new System.Drawing.Size(75, 45);
+            this.pushListLabel.TabIndex = 17;
+            this.pushListLabel.Text = "\r\nShow推列表\r\n\r\n";
+            this.pushListLabel.Click += new System.EventHandler(this.pushListPicBox_Click);
+            this.pushListLabel.MouseLeave += new System.EventHandler(this.pushListPicBox_MouseLeave);
+            this.pushListLabel.MouseHover += new System.EventHandler(this.pushListPicBox_MouseHover);
+            // 
+            // pushListPicBox
+            // 
+            this.pushListPicBox.Image = ((System.Drawing.Image)(resources.GetObject("pushListPicBox.Image")));
+            this.pushListPicBox.Location = new System.Drawing.Point(791, 9);
+            this.pushListPicBox.Name = "pushListPicBox";
+            this.pushListPicBox.Size = new System.Drawing.Size(13, 10);
+            this.pushListPicBox.TabIndex = 16;
+            this.pushListPicBox.TabStop = false;
+            this.pushListPicBox.Click += new System.EventHandler(this.pushListPicBox_Click);
+            this.pushListPicBox.MouseLeave += new System.EventHandler(this.pushListPicBox_MouseLeave);
+            this.pushListPicBox.MouseHover += new System.EventHandler(this.pushListPicBox_MouseHover);
+            // 
+            // pinTextBox
+            // 
+            this.pinTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.pinTextBox.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pinTextBox.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.pinTextBox.Location = new System.Drawing.Point(75, 192);
+            this.pinTextBox.Name = "pinTextBox";
+            this.pinTextBox.Size = new System.Drawing.Size(294, 17);
+            this.pinTextBox.TabIndex = 15;
+            this.pinTextBox.Text = "请输入6位PIN码";
+            this.pinTextBox.TextChanged += new System.EventHandler(this.pinTextBox_TextChanged);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(72, 180);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(300, 40);
+            this.pictureBox10.TabIndex = 14;
+            this.pictureBox10.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.DimGray;
+            this.label10.Location = new System.Drawing.Point(17, 7);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(103, 15);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "您的设备：未绑定";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(900, 30);
+            this.pictureBox9.TabIndex = 12;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(502, 136);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(284, 244);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.DimGray;
+            this.label9.Location = new System.Drawing.Point(68, 239);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(311, 51);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "1. 请首先在您的设备上安装Showkey电视助手\r\n2. 启动Showkey电视助手，即可看到图中所示的PIN码\r\n3. 输入PIN码后，请在您的设备上确认，此" +
+                "时绑定成功";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DimGray;
+            this.label8.Location = new System.Drawing.Point(68, 102);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(474, 23);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "这是一款简易的小工具，希望通过这个工具，帮您装应用、看大片";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DimGray;
+            this.label7.Location = new System.Drawing.Point(67, 69);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(183, 33);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "欢迎使用云服务";
             // 
             // label6
             // 
@@ -377,7 +550,7 @@
             this.bottomPicBox.BackColor = System.Drawing.Color.Transparent;
             this.bottomPicBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bottomPicBox.BackgroundImage")));
             this.bottomPicBox.Image = global::PCHelper.Properties.Resources.img_sep;
-            this.bottomPicBox.Location = new System.Drawing.Point(-1, 570);
+            this.bottomPicBox.Location = new System.Drawing.Point(-1, 571);
             this.bottomPicBox.Name = "bottomPicBox";
             this.bottomPicBox.Size = new System.Drawing.Size(900, 30);
             this.bottomPicBox.TabIndex = 12;
@@ -452,11 +625,24 @@
             // menuBgPic
             // 
             this.menuBgPic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("menuBgPic.BackgroundImage")));
-            this.menuBgPic.Location = new System.Drawing.Point(3, 81);
+            this.menuBgPic.Location = new System.Drawing.Point(3, 80);
             this.menuBgPic.Name = "menuBgPic";
             this.menuBgPic.Size = new System.Drawing.Size(900, 44);
             this.menuBgPic.TabIndex = 6;
             this.menuBgPic.TabStop = false;
+            // 
+            // webShowkeyLabel
+            // 
+            this.webShowkeyLabel.AutoSize = true;
+            this.webShowkeyLabel.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.webShowkeyLabel.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.webShowkeyLabel.Location = new System.Drawing.Point(347, 239);
+            this.webShowkeyLabel.Name = "webShowkeyLabel";
+            this.webShowkeyLabel.Size = new System.Drawing.Size(139, 17);
+            this.webShowkeyLabel.TabIndex = 18;
+            this.webShowkeyLabel.Text = "获取Showkey电视助手";
+            this.webShowkeyLabel.MouseLeave += new System.EventHandler(this.pushListPicBox_MouseLeave);
+            this.webShowkeyLabel.MouseHover += new System.EventHandler(this.pushListPicBox_MouseHover);
             // 
             // BaseForm
             // 
@@ -483,13 +669,22 @@
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BaseForm";
-            this.Text = "BaseForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Showkey电视助手";
             this.Load += new System.EventHandler(this.BaseForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.control_MouseDown);
             this.pcPanel.ResumeLayout(false);
             this.pcPanel.PerformLayout();
             this.cloudPanel.ResumeLayout(false);
             this.cloudPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pushPicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            this.cloudPanel0.ResumeLayout(false);
+            this.cloudPanel0.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pushListPicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sendPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.yunIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tuiIcon)).EndInit();
@@ -549,7 +744,21 @@
         private System.Windows.Forms.PictureBox sendPicBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel cloudPanel0;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox pinTextBox;
         private System.Windows.Forms.TextBox addressTextBox;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pushPicBox;
+        private System.Windows.Forms.Label pushListLabel;
+        private System.Windows.Forms.PictureBox pushListPicBox;
+        private System.Windows.Forms.Label webShowkeyLabel;
     }
 }
 

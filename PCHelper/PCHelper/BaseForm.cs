@@ -21,6 +21,7 @@ namespace PCHelper
         public const int HTCAPTION = 0x0002;
         private int SELECTED_INDEX = 0;
         private string addressContent;
+        private bool connectedToShowkey;
         public BaseForm()
         {
             InitializeComponent();
@@ -43,9 +44,12 @@ namespace PCHelper
             keyPictureBox.Location = new Point((140) * 2, 0);
             keyPictureBox.Parent = menuBgPic;
 
+            pcPanel.Location = new Point(0, 125);
             pcPanel.Parent = this;
             cloudPanel.Parent = this;
+            cloudPanel0.Parent = this;
             cloudPanel.Location = pcPanel.Location;
+            cloudPanel0.Location = pcPanel.Location;
             sharePicBox.Parent = pcPanel;
 
             pictureBox_Min.Image = null;
@@ -201,7 +205,14 @@ namespace PCHelper
         private void changePanelVisable(bool pcPanelVisable, bool cloudPanelVisable, bool keyPanelVisable)
         {
             this.pcPanel.Visible = pcPanelVisable;
-            this.cloudPanel.Visible = cloudPanelVisable;
+            if (connectedToShowkey && cloudPanelVisable)
+            {
+                this.cloudPanel.Visible = cloudPanelVisable;
+            }
+            else
+            {
+                this.cloudPanel0.Visible = cloudPanelVisable;
+            }
             if (cloudPanelVisable)
             {
                 if (addressContent == null || addressContent == "")
@@ -333,6 +344,42 @@ namespace PCHelper
         private void sendPicBox_Click(object sender, EventArgs e)
         {
             SendForm sendForm = new SendForm();
+            sendForm.ShowDialog();
+        }
+
+        private void pinTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (pinTextBox.Text.Length == 6)
+            {
+                connectedToShowkey = true;
+                changePanelVisable(false, true, false);
+            }
+        }
+
+        private void pushPicBox_MouseHover(object sender, EventArgs e)
+        {
+            pushPicBox.Image = Properties.Resources.btn_push_pressed;
+        }
+
+        private void pushPicBox_MouseLeave(object sender, EventArgs e)
+        {
+            pushPicBox.Image = Properties.Resources.btn_push;
+        }
+
+        private void pushListPicBox_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void pushListPicBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+        }
+
+        private void pushListPicBox_Click(object sender, EventArgs e)
+        {
+            SendForm sendForm = new SendForm();
+            sendForm.Location = new Point(this.Location.X + 150, this.Location.Y + 120);
             sendForm.ShowDialog();
         }
     }

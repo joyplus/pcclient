@@ -160,6 +160,20 @@ namespace PCHelper.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap btn_push {
+            get {
+                object obj = ResourceManager.GetObject("btn_push", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap btn_push_pressed {
+            get {
+                object obj = ResourceManager.GetObject("btn_push_pressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap btn_send {
             get {
                 object obj = ResourceManager.GetObject("btn_send", resourceCulture);
