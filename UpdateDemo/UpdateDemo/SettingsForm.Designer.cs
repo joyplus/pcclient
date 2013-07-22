@@ -1,0 +1,300 @@
+﻿namespace UpdateDemo
+{
+    partial class UpdateForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateForm));
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.headerPicBox = new System.Windows.Forms.PictureBox();
+            this.closePicbox = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.regularLabel = new System.Windows.Forms.Label();
+            this.updateLabel = new System.Windows.Forms.Label();
+            this.aboutUsLabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.autoUpdateCheckBox = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.minRadio = new System.Windows.Forms.RadioButton();
+            this.exitRadio = new System.Windows.Forms.RadioButton();
+            this.confirmBtn = new System.Windows.Forms.Button();
+            this.cancelBtn = new System.Windows.Forms.Button();
+            this.applyBtn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.headerPicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closePicbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // headerPicBox
+            // 
+            this.headerPicBox.Image = ((System.Drawing.Image)(resources.GetObject("headerPicBox.Image")));
+            this.headerPicBox.Location = new System.Drawing.Point(0, 0);
+            this.headerPicBox.Name = "headerPicBox";
+            this.headerPicBox.Size = new System.Drawing.Size(600, 30);
+            this.headerPicBox.TabIndex = 0;
+            this.headerPicBox.TabStop = false;
+            this.headerPicBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.control_MouseDown);
+            // 
+            // closePicbox
+            // 
+            this.closePicbox.BackColor = System.Drawing.Color.Transparent;
+            this.closePicbox.Image = global::UpdateDemo.Properties.Resources.btn_close;
+            this.closePicbox.Location = new System.Drawing.Point(554, 0);
+            this.closePicbox.Name = "closePicbox";
+            this.closePicbox.Size = new System.Drawing.Size(26, 33);
+            this.closePicbox.TabIndex = 1;
+            this.closePicbox.TabStop = false;
+            this.closePicbox.Click += new System.EventHandler(this.closePicbox_Click);
+            this.closePicbox.MouseLeave += new System.EventHandler(this.closePicbox_MouseLeave);
+            this.closePicbox.MouseHover += new System.EventHandler(this.closePicbox_MouseHover);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(0, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(140, 30);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(0, 66);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(140, 30);
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(0, 102);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(140, 30);
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            // 
+            // regularLabel
+            // 
+            this.regularLabel.AutoSize = true;
+            this.regularLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.regularLabel.Location = new System.Drawing.Point(32, 37);
+            this.regularLabel.Name = "regularLabel";
+            this.regularLabel.Size = new System.Drawing.Size(53, 12);
+            this.regularLabel.TabIndex = 5;
+            this.regularLabel.Text = "常规设置";
+            // 
+            // updateLabel
+            // 
+            this.updateLabel.AutoSize = true;
+            this.updateLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.updateLabel.Location = new System.Drawing.Point(32, 76);
+            this.updateLabel.Name = "updateLabel";
+            this.updateLabel.Size = new System.Drawing.Size(53, 12);
+            this.updateLabel.TabIndex = 6;
+            this.updateLabel.Text = "软件更新";
+            // 
+            // aboutUsLabel
+            // 
+            this.aboutUsLabel.AutoSize = true;
+            this.aboutUsLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.aboutUsLabel.Location = new System.Drawing.Point(32, 111);
+            this.aboutUsLabel.Name = "aboutUsLabel";
+            this.aboutUsLabel.Size = new System.Drawing.Size(53, 12);
+            this.aboutUsLabel.TabIndex = 7;
+            this.aboutUsLabel.Text = "关于我们";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.applyBtn);
+            this.panel1.Controls.Add(this.cancelBtn);
+            this.panel1.Controls.Add(this.confirmBtn);
+            this.panel1.Controls.Add(this.exitRadio);
+            this.panel1.Controls.Add(this.minRadio);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.autoUpdateCheckBox);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(146, 30);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(434, 374);
+            this.panel1.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(25, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 12);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "启动设置";
+            // 
+            // autoUpdateCheckBox
+            // 
+            this.autoUpdateCheckBox.AutoSize = true;
+            this.autoUpdateCheckBox.ForeColor = System.Drawing.Color.DimGray;
+            this.autoUpdateCheckBox.Location = new System.Drawing.Point(27, 36);
+            this.autoUpdateCheckBox.Name = "autoUpdateCheckBox";
+            this.autoUpdateCheckBox.Size = new System.Drawing.Size(168, 16);
+            this.autoUpdateCheckBox.TabIndex = 1;
+            this.autoUpdateCheckBox.Text = "在系统启动时自动检查更新";
+            this.autoUpdateCheckBox.UseVisualStyleBackColor = true;
+            this.autoUpdateCheckBox.CheckedChanged += new System.EventHandler(this.autoUpdateCheckBox_CheckedChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(25, 90);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 12);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "关闭应用程序";
+            // 
+            // minRadio
+            // 
+            this.minRadio.AutoSize = true;
+            this.minRadio.ForeColor = System.Drawing.Color.DimGray;
+            this.minRadio.Location = new System.Drawing.Point(27, 106);
+            this.minRadio.Name = "minRadio";
+            this.minRadio.Size = new System.Drawing.Size(95, 16);
+            this.minRadio.TabIndex = 3;
+            this.minRadio.TabStop = true;
+            this.minRadio.Text = "最小化到托盘";
+            this.minRadio.UseVisualStyleBackColor = true;
+            this.minRadio.CheckedChanged += new System.EventHandler(this.minRadio_CheckedChanged);
+            // 
+            // exitRadio
+            // 
+            this.exitRadio.AutoSize = true;
+            this.exitRadio.ForeColor = System.Drawing.Color.DimGray;
+            this.exitRadio.Location = new System.Drawing.Point(27, 129);
+            this.exitRadio.Name = "exitRadio";
+            this.exitRadio.Size = new System.Drawing.Size(95, 16);
+            this.exitRadio.TabIndex = 4;
+            this.exitRadio.TabStop = true;
+            this.exitRadio.Text = "退出应用程序";
+            this.exitRadio.UseVisualStyleBackColor = true;
+            this.exitRadio.CheckedChanged += new System.EventHandler(this.exitRadio_CheckedChanged);
+            // 
+            // confirmBtn
+            // 
+            this.confirmBtn.ForeColor = System.Drawing.Color.DimGray;
+            this.confirmBtn.Location = new System.Drawing.Point(199, 332);
+            this.confirmBtn.Name = "confirmBtn";
+            this.confirmBtn.Size = new System.Drawing.Size(60, 23);
+            this.confirmBtn.TabIndex = 5;
+            this.confirmBtn.Text = "确认";
+            this.confirmBtn.UseVisualStyleBackColor = true;
+            this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
+            // 
+            // cancelBtn
+            // 
+            this.cancelBtn.ForeColor = System.Drawing.Color.DimGray;
+            this.cancelBtn.Location = new System.Drawing.Point(277, 332);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(60, 23);
+            this.cancelBtn.TabIndex = 6;
+            this.cancelBtn.Text = "取消";
+            this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            // 
+            // applyBtn
+            // 
+            this.applyBtn.ForeColor = System.Drawing.Color.DimGray;
+            this.applyBtn.Location = new System.Drawing.Point(354, 332);
+            this.applyBtn.Name = "applyBtn";
+            this.applyBtn.Size = new System.Drawing.Size(60, 23);
+            this.applyBtn.TabIndex = 7;
+            this.applyBtn.Text = "应用";
+            this.applyBtn.UseVisualStyleBackColor = true;
+            this.applyBtn.Click += new System.EventHandler(this.applyBtn_Click);
+            // 
+            // UpdateForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(592, 416);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.aboutUsLabel);
+            this.Controls.Add(this.updateLabel);
+            this.Controls.Add(this.regularLabel);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.closePicbox);
+            this.Controls.Add(this.headerPicBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "UpdateForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "设置";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.headerPicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closePicbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox headerPicBox;
+        private System.Windows.Forms.PictureBox closePicbox;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label regularLabel;
+        private System.Windows.Forms.Label updateLabel;
+        private System.Windows.Forms.Label aboutUsLabel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox autoUpdateCheckBox;
+        private System.Windows.Forms.RadioButton minRadio;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RadioButton exitRadio;
+        private System.Windows.Forms.Button applyBtn;
+        private System.Windows.Forms.Button cancelBtn;
+        private System.Windows.Forms.Button confirmBtn;
+    }
+}
+

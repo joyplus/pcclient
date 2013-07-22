@@ -382,5 +382,10 @@ namespace PCHelper
             sendForm.Location = new Point(this.Location.X + 150, this.Location.Y + 120);
             sendForm.ShowDialog();
         }
+
+        private void pushPicBox_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

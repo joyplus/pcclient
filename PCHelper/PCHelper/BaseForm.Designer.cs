@@ -35,6 +35,7 @@
             this.addressTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.cloudPanel0 = new System.Windows.Forms.Panel();
+            this.webShowkeyLabel = new System.Windows.Forms.Label();
             this.pushListLabel = new System.Windows.Forms.Label();
             this.pushListPicBox = new System.Windows.Forms.PictureBox();
             this.pinTextBox = new System.Windows.Forms.TextBox();
@@ -75,7 +76,6 @@
             this.logo = new System.Windows.Forms.PictureBox();
             this.headerPicture = new System.Windows.Forms.PictureBox();
             this.menuBgPic = new System.Windows.Forms.PictureBox();
-            this.webShowkeyLabel = new System.Windows.Forms.Label();
             this.pcPanel.SuspendLayout();
             this.cloudPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pushPicBox)).BeginInit();
@@ -152,6 +152,7 @@
             this.pushPicBox.Size = new System.Drawing.Size(127, 40);
             this.pushPicBox.TabIndex = 11;
             this.pushPicBox.TabStop = false;
+            this.pushPicBox.Click += new System.EventHandler(this.pushPicBox_Click);
             this.pushPicBox.MouseLeave += new System.EventHandler(this.pushPicBox_MouseLeave);
             this.pushPicBox.MouseHover += new System.EventHandler(this.pushPicBox_MouseHover);
             // 
@@ -194,6 +195,19 @@
             this.cloudPanel0.Size = new System.Drawing.Size(900, 446);
             this.cloudPanel0.TabIndex = 8;
             this.cloudPanel0.Visible = false;
+            // 
+            // webShowkeyLabel
+            // 
+            this.webShowkeyLabel.AutoSize = true;
+            this.webShowkeyLabel.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.webShowkeyLabel.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.webShowkeyLabel.Location = new System.Drawing.Point(347, 239);
+            this.webShowkeyLabel.Name = "webShowkeyLabel";
+            this.webShowkeyLabel.Size = new System.Drawing.Size(139, 17);
+            this.webShowkeyLabel.TabIndex = 18;
+            this.webShowkeyLabel.Text = "获取Showkey电视助手";
+            this.webShowkeyLabel.MouseLeave += new System.EventHandler(this.pushListPicBox_MouseLeave);
+            this.webShowkeyLabel.MouseHover += new System.EventHandler(this.pushListPicBox_MouseHover);
             // 
             // pushListLabel
             // 
@@ -630,19 +644,6 @@
             this.menuBgPic.Size = new System.Drawing.Size(900, 44);
             this.menuBgPic.TabIndex = 6;
             this.menuBgPic.TabStop = false;
-            // 
-            // webShowkeyLabel
-            // 
-            this.webShowkeyLabel.AutoSize = true;
-            this.webShowkeyLabel.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.webShowkeyLabel.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.webShowkeyLabel.Location = new System.Drawing.Point(347, 239);
-            this.webShowkeyLabel.Name = "webShowkeyLabel";
-            this.webShowkeyLabel.Size = new System.Drawing.Size(139, 17);
-            this.webShowkeyLabel.TabIndex = 18;
-            this.webShowkeyLabel.Text = "获取Showkey电视助手";
-            this.webShowkeyLabel.MouseLeave += new System.EventHandler(this.pushListPicBox_MouseLeave);
-            this.webShowkeyLabel.MouseHover += new System.EventHandler(this.pushListPicBox_MouseHover);
             // 
             // BaseForm
             // 
