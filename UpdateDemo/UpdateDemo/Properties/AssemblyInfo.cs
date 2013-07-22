@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("UpdateDemo")]
+[assembly: AssemblyTitle("设置")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("微软中国")]
-[assembly: AssemblyProduct("UpdateDemo")]
-[assembly: AssemblyCopyright("Copyright © 微软中国 2013")]
+[assembly: AssemblyCompany("上海志精网络科技有限公司")]
+[assembly: AssemblyProduct("设置")]
+[assembly: AssemblyCopyright("Copyright © Joyplus 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

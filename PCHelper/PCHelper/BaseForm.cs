@@ -23,7 +23,7 @@ namespace PCHelper
         private int SELECTED_INDEX = 0;
         private string addressContent;
         private bool connectedToShowkey;
-        private string UPDATE_PROGRAM_NAME = "UpdateDemo";
+        private string UPDATE_PROGRAM_NAME = "SettingsForm.exe";
         Process updateProcess;
 
         public BaseForm()

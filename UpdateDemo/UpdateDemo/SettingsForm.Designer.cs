@@ -44,8 +44,8 @@
             this.autoUpdateCheckBox = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.updatePanel = new System.Windows.Forms.Panel();
-            this.checkingLabel = new System.Windows.Forms.Label();
             this.updateBtn = new System.Windows.Forms.PictureBox();
+            this.checkingLabel = new System.Windows.Forms.Label();
             this.aboutusPicBox = new System.Windows.Forms.PictureBox();
             this.updatePicBox = new System.Windows.Forms.PictureBox();
             this.regularPicBox = new System.Windows.Forms.PictureBox();
@@ -222,6 +222,19 @@
             this.updatePanel.TabIndex = 8;
             this.updatePanel.Visible = false;
             // 
+            // updateBtn
+            // 
+            this.updateBtn.Image = global::UpdateDemo.Properties.Resources.btn_update;
+            this.updateBtn.Location = new System.Drawing.Point(178, 198);
+            this.updateBtn.Name = "updateBtn";
+            this.updateBtn.Size = new System.Drawing.Size(76, 24);
+            this.updateBtn.TabIndex = 1;
+            this.updateBtn.TabStop = false;
+            this.updateBtn.Visible = false;
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
+            this.updateBtn.MouseLeave += new System.EventHandler(this.updateBtn_MouseLeave);
+            this.updateBtn.MouseHover += new System.EventHandler(this.updateBtn_MouseHover);
+            // 
             // checkingLabel
             // 
             this.checkingLabel.AutoSize = true;
@@ -231,17 +244,6 @@
             this.checkingLabel.Size = new System.Drawing.Size(119, 12);
             this.checkingLabel.TabIndex = 0;
             this.checkingLabel.Text = "正在检测，请稍后...";
-            // 
-            // updateBtn
-            // 
-            this.updateBtn.Image = global::UpdateDemo.Properties.Resources.btn_update;
-            this.updateBtn.Location = new System.Drawing.Point(157, 198);
-            this.updateBtn.Name = "updateBtn";
-            this.updateBtn.Size = new System.Drawing.Size(76, 24);
-            this.updateBtn.TabIndex = 1;
-            this.updateBtn.TabStop = false;
-            this.updateBtn.MouseLeave += new System.EventHandler(this.updateBtn_MouseLeave);
-            this.updateBtn.MouseHover += new System.EventHandler(this.updateBtn_MouseHover);
             // 
             // aboutusPicBox
             // 

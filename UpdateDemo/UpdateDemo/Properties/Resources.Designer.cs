@@ -87,5 +87,14 @@ namespace UpdateDemo.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 恭喜！您目前安装的软件为最新版本！.
+        /// </summary>
+        internal static string LATEST_VERSION_LABEL {
+            get {
+                return ResourceManager.GetString("LATEST_VERSION_LABEL", resourceCulture);
+            }
+        }
     }
 }

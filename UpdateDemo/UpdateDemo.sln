@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateDemo", "UpdateDemo\UpdateDemo.csproj", "{10C03605-57ED-4B0E-A24C-C4AB02774C33}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettingsForm", "UpdateDemo\SettingsForm.csproj", "{10C03605-57ED-4B0E-A24C-C4AB02774C33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

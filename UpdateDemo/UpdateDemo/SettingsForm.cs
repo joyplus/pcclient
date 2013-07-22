@@ -11,6 +11,7 @@ using System.IO;
 using Microsoft.Win32;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
+using System.Diagnostics;
 
 namespace UpdateDemo
 {
@@ -30,6 +31,8 @@ namespace UpdateDemo
         private string SETTING_AUTO_UPDATE = "joyplus_pcclient_auto_update";
         private string SETTING_EXIST_OPTION = "joyplus_pcclient_exist_option";
         private string PCCLIENT_EXE_FILE_NAME = "Showkey电视助手.exe";
+        private string PCCLIENT_EXE_DOWNLOADING_FILE_NAME = "Showkey电视助手_TEMP";
+        private string latestVersion;
 
         public UpdateForm()
         {
@@ -115,41 +118,23 @@ namespace UpdateDemo
        /*     this.smoothProgressBar1.Value = 0;
 
             this.timer1.Interval = 1;
-            this.timer1.Enabled = true;*/
-
-            string latestVersion = getLatestVersion();
-            string currentVersion = ReadInfo(VERSION_REGISTER_KEY);
-            bool needUpdate = false;
-            if (latestVersion != null)
-            {
-                if (currentVersion == null || currentVersion == "")
-                {
-                    if (latestVersion != "1.0" && latestVersion != "1.0.0")
-                    {
-                        needUpdate = true;
-                    }
-                }
-                else
-                {
-                    if (currentVersion.CompareTo(latestVersion) < 0)
-                    {
-                        needUpdate = true;
-                    }
-                }
-               
-            }
-            if (needUpdate)
-            {
-                triggerUpdate();
-            }
-            else
-            {
-                MessageBox.Show("已经是最新！");
-            }
+            this.timer1.Enabled = true;*/           
         }
 
         public void triggerUpdate()
         {
+            Process[]p=Process.GetProcesses();
+            try
+            {
+                foreach (Process p1 in p)
+                {
+                    if (p1.ProcessName.Contains("Showkey电视助手"))
+                    {
+                       p1.Kill();
+                    }
+                }
+            }
+            finally { }
             startDownloadExe();
         }
 
@@ -161,7 +146,7 @@ namespace UpdateDemo
             //绑定下载事件，以便于显示当前进度
             ws.DownloadFileCompleted += new AsyncCompletedEventHandler(OnDownloadFileCompleted);
             //绑定下载完成事件，以便于计算总进度
-            ws.DownloadFileAsync(new Uri(SERVER_ADDRESS + VERSION_FILE_NAME), PCCLIENT_EXE_FILE_NAME); 
+            ws.DownloadFileAsync(new Uri(SERVER_ADDRESS + PCCLIENT_EXE_FILE_NAME), PCCLIENT_EXE_DOWNLOADING_FILE_NAME); 
 
         }
 
@@ -172,8 +157,19 @@ namespace UpdateDemo
         }
         private void OnDownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            MessageBox.Show("complied!");//计算总下载进度，因为我在服务端XML文件里可以得到文件大小，所以我直接用服务端数据，我回头再看看有没有什么好办法
-
+            string filename = Application.StartupPath + "\\" + PCCLIENT_EXE_FILE_NAME;
+            if (File.Exists(filename))
+            {
+                File.Delete(filename);
+            }
+            string downloadingFilename = Application.StartupPath + "\\" + PCCLIENT_EXE_DOWNLOADING_FILE_NAME;
+            if (File.Exists(downloadingFilename))
+            {
+                File.Move(downloadingFilename, filename);
+            }
+            System.Diagnostics.Process.Start(filename, "");
+            WriteInfo(VERSION_REGISTER_KEY, latestVersion);
+            checkingLabel.Text = Properties.Resources.LATEST_VERSION_LABEL;
         }
 
         public string getLatestVersion()
@@ -329,6 +325,37 @@ namespace UpdateDemo
         private void updatePicBox_Click(object sender, EventArgs e)
         {
             switchPanel(false, true, false);
+            updateBtn.Visible = false;
+            latestVersion = getLatestVersion();
+            string currentVersion = ReadInfo(VERSION_REGISTER_KEY);
+            bool needUpdate = false;
+            if (latestVersion != null)
+            {
+                if (currentVersion == null || currentVersion == "")
+                {
+                    if (latestVersion != "1.0" && latestVersion != "1.0.0")
+                    {
+                        needUpdate = true;
+                    }
+                }
+                else
+                {
+                    if (currentVersion.CompareTo(latestVersion) < 0)
+                    {
+                        needUpdate = true;
+                    }
+                }
+
+            }
+            if (needUpdate)
+            {
+                checkingLabel.Text = "发现最新版本！版本号：" + latestVersion;
+                updateBtn.Visible = true;         
+            }
+            else
+            {
+                checkingLabel.Text = Properties.Resources.LATEST_VERSION_LABEL;
+            }
         }
 
         private void aboutusPicBox_Click(object sender, EventArgs e)
@@ -374,6 +401,11 @@ namespace UpdateDemo
         private void updateBtn_MouseLeave(object sender, EventArgs e)
         {
             this.updateBtn.Image = Properties.Resources.btn_update;
+        }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            triggerUpdate();
         }
     }
 }
