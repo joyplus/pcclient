@@ -73,5 +73,19 @@ namespace UpdateDemo.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        internal static System.Drawing.Bitmap btn_update {
+            get {
+                object obj = ResourceManager.GetObject("btn_update", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap btn_update_pressed {
+            get {
+                object obj = ResourceManager.GetObject("btn_update_pressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

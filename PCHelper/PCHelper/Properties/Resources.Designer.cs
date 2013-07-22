@@ -188,6 +188,20 @@ namespace PCHelper.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap btn_setting {
+            get {
+                object obj = ResourceManager.GetObject("btn_setting", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap btn_setting_pressed {
+            get {
+                object obj = ResourceManager.GetObject("btn_setting_pressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap btn_share {
             get {
                 object obj = ResourceManager.GetObject("btn_share", resourceCulture);

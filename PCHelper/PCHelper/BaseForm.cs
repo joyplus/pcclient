@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.Data;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
+using System.Diagnostics;
 namespace PCHelper
 {
     public partial class BaseForm : Form
@@ -22,6 +23,9 @@ namespace PCHelper
         private int SELECTED_INDEX = 0;
         private string addressContent;
         private bool connectedToShowkey;
+        private string UPDATE_PROGRAM_NAME = "UpdateDemo";
+        Process updateProcess;
+
         public BaseForm()
         {
             InitializeComponent();
@@ -34,7 +38,7 @@ namespace PCHelper
             this.logo.Parent = this.headerPicture;
             pictureBox_Min.Parent = this.headerPicture;
             pictureBox_Close.Parent = this.headerPicture;
-
+            settingPicBox.Parent = this.headerPicture;
             pcPictureBox.Location = new Point(0, 0);
             pcPictureBox.Parent = menuBgPic;
 
@@ -52,6 +56,8 @@ namespace PCHelper
             cloudPanel0.Location = pcPanel.Location;
             sharePicBox.Parent = pcPanel;
 
+            settingPicBox.Image = null;
+            settingPicBox.Image = Properties.Resources.btn_setting;
             pictureBox_Min.Image = null;
             pictureBox_Min.Image = Properties.Resources.btn_min;
             pictureBox_Close.Image = null;
@@ -73,6 +79,17 @@ namespace PCHelper
                     break;
                 case 2:
                     Frm_Tem.Close();
+                    if (updateProcess != null && !updateProcess.HasExited)
+                    {
+                        try
+                        {
+                            updateProcess.CloseMainWindow();
+                        }
+                        finally
+                        {
+
+                        }
+                    }
                     break;
             }
         }
@@ -386,6 +403,25 @@ namespace PCHelper
         private void pushPicBox_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void settingPicBox_Click(object sender, EventArgs e)
+        {
+            if (updateProcess == null || updateProcess.HasExited)
+            {
+                string filename = Application.StartupPath + "\\" + UPDATE_PROGRAM_NAME;
+                updateProcess = System.Diagnostics.Process.Start(filename, "");
+            }
+        }
+
+        private void settingPicBox_MouseHover(object sender, EventArgs e)
+        {
+            this.settingPicBox.Image = Properties.Resources.btn_setting_pressed;
+        }
+
+        private void settingPicBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.settingPicBox.Image = Properties.Resources.btn_setting;
         }
     }
 }

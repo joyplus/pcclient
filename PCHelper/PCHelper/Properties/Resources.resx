@@ -172,6 +172,12 @@
   <data name="btn_send_pressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\选择推送-按下.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="btn_setting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\设置.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_setting_pressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\设置-点击.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="btn_share" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\共享.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

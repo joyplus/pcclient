@@ -31,7 +31,6 @@ namespace UpdateDemo
         private string SETTING_EXIST_OPTION = "joyplus_pcclient_exist_option";
         private string PCCLIENT_EXE_FILE_NAME = "Showkey电视助手.exe";
 
-        private bool changed;
         public UpdateForm()
         {
             InitializeComponent();
@@ -39,8 +38,22 @@ namespace UpdateDemo
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.TopMost = true; 
             this.headerPicBox.Parent = this;
             this.closePicbox.Parent = headerPicBox;
+            this.regularPanel.Location = new Point(142, 30);
+            this.updatePanel.Location = this.regularPanel.Location;
+            this.aboutusPanel.Location = this.regularPanel.Location;
+
+            this.regularLabel.Parent = this.regularPicBox;
+            this.regularLabel.Location = new Point(40, 10);
+            regularPicBox.BackColor = Color.FromArgb(255, 226, 245, 255);
+
+            this.updateLabel.Parent = this.updatePicBox;
+            this.updateLabel.Location = new Point(40, 10);
+
+            this.aboutUsLabel.Parent = this.aboutusPicBox;
+            this.aboutUsLabel.Location = new Point(40, 10);
 
             string autoUpdate = ReadInfo(SETTING_AUTO_UPDATE);
             if (autoUpdate == "1")
@@ -266,7 +279,7 @@ namespace UpdateDemo
 
         private void applyBtn_Click(object sender, EventArgs e)
         {
-            changed = false;
+            this.applyBtn.Enabled = false;
             saveSettings();
             applyBtn.Enabled = false;
         }
@@ -295,17 +308,72 @@ namespace UpdateDemo
 
         private void autoUpdateCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            this.changed = true;
+            this.applyBtn.Enabled = true;
         }
 
         private void minRadio_CheckedChanged(object sender, EventArgs e)
         {
-            this.changed = true;
+            this.applyBtn.Enabled = true;
         }
 
         private void exitRadio_CheckedChanged(object sender, EventArgs e)
         {
-            this.changed = true;
+            this.applyBtn.Enabled = true;
+        }
+
+        private void regularPicBox_Click(object sender, EventArgs e)
+        {
+            switchPanel(true, false, false);
+        }
+
+        private void updatePicBox_Click(object sender, EventArgs e)
+        {
+            switchPanel(false, true, false);
+        }
+
+        private void aboutusPicBox_Click(object sender, EventArgs e)
+        {
+            switchPanel(false, false, true);
+        }
+        private void switchPanel(bool regualarVisable, bool updateVisable, bool aboutusVisable)
+        {
+            this.regularPanel.Visible = regualarVisable;
+            this.updatePanel.Visible = updateVisable;
+            this.aboutusPanel.Visible = aboutusVisable;
+            if (regualarVisable)
+            {
+                regularPicBox.BackColor = Color.FromArgb(255, 226, 245, 255);
+            }
+            else
+            {
+                regularPicBox.BackColor = Color.FromArgb(0, 226, 245, 255);
+            }
+            if (updateVisable)
+            {
+                updatePicBox.BackColor = Color.FromArgb(255, 226, 245, 255);
+            }
+            else
+            {
+                updatePicBox.BackColor = Color.FromArgb(0, 226, 245, 255);
+            }
+            if (aboutusVisable)
+            {
+                aboutusPicBox.BackColor = Color.FromArgb(255, 226, 245, 255);
+            }
+            else
+            {
+                aboutusPicBox.BackColor = Color.FromArgb(0, 226, 245, 255);
+            }
+        }
+
+        private void updateBtn_MouseHover(object sender, EventArgs e)
+        {
+            this.updateBtn.Image = Properties.Resources.btn_update_pressed;
+        }
+
+        private void updateBtn_MouseLeave(object sender, EventArgs e)
+        {
+            this.updateBtn.Image = Properties.Resources.btn_update;
         }
     }
 }

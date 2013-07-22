@@ -76,6 +76,7 @@
             this.logo = new System.Windows.Forms.PictureBox();
             this.headerPicture = new System.Windows.Forms.PictureBox();
             this.menuBgPic = new System.Windows.Forms.PictureBox();
+            this.settingPicBox = new System.Windows.Forms.PictureBox();
             this.pcPanel.SuspendLayout();
             this.cloudPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pushPicBox)).BeginInit();
@@ -105,6 +106,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuBgPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.settingPicBox)).BeginInit();
             this.SuspendLayout();
             // 
             // pcPanel
@@ -645,11 +647,26 @@
             this.menuBgPic.TabIndex = 6;
             this.menuBgPic.TabStop = false;
             // 
+            // settingPicBox
+            // 
+            this.settingPicBox.BackColor = System.Drawing.Color.Transparent;
+            this.settingPicBox.Image = global::PCHelper.Properties.Resources.btn_setting;
+            this.settingPicBox.Location = new System.Drawing.Point(813, 0);
+            this.settingPicBox.Name = "settingPicBox";
+            this.settingPicBox.Size = new System.Drawing.Size(26, 23);
+            this.settingPicBox.TabIndex = 18;
+            this.settingPicBox.TabStop = false;
+            this.settingPicBox.Tag = "0";
+            this.settingPicBox.Click += new System.EventHandler(this.settingPicBox_Click);
+            this.settingPicBox.MouseLeave += new System.EventHandler(this.settingPicBox_MouseLeave);
+            this.settingPicBox.MouseHover += new System.EventHandler(this.settingPicBox_MouseHover);
+            // 
             // BaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 600);
+            this.Controls.Add(this.settingPicBox);
             this.Controls.Add(this.pcPictureBox);
             this.Controls.Add(this.cloudPictureBox);
             this.Controls.Add(this.keyPictureBox);
@@ -706,6 +723,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuBgPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.settingPicBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -760,6 +778,7 @@
         private System.Windows.Forms.Label pushListLabel;
         private System.Windows.Forms.PictureBox pushListPicBox;
         private System.Windows.Forms.Label webShowkeyLabel;
+        private System.Windows.Forms.PictureBox settingPicBox;
     }
 }
 
