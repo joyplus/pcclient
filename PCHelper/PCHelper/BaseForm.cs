@@ -9,6 +9,9 @@ using System.Data;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
+using Microsoft.Win32; 
+
 namespace PCHelper
 {
     public partial class BaseForm : Form
@@ -48,13 +51,30 @@ namespace PCHelper
             keyPictureBox.Location = new Point((140) * 2, 0);
             keyPictureBox.Parent = menuBgPic;
 
-            pcPanel.Location = new Point(0, 125);
+            pcPanel.Location = new Point(0, 124);
             pcPanel.Parent = this;
             cloudPanel.Parent = this;
             cloudPanel0.Parent = this;
             cloudPanel.Location = pcPanel.Location;
             cloudPanel0.Location = pcPanel.Location;
+            keyPanel.Location = pcPanel.Location;
             sharePicBox.Parent = pcPanel;
+
+            unbindedLabel.Parent = unbindPicBox;
+            unbindedLabel.Location = new Point(17, 7);
+            pushListPicBox.Parent = unbindPicBox;
+            pushListPicBox.Location = new Point(791, 9);
+            pushListLabel.Parent = unbindPicBox;
+            pushListLabel.Location = new Point(807, -9);
+
+            bindLabel.Parent = bindPicBox;
+            bindLabel.Location = new Point(17, 7);
+            bindPushPicBox.Parent = bindPicBox;
+            bindPushPicBox.Location = new Point(791, 9);
+            bindPushLabel.Parent = bindPicBox;
+            bindPushLabel.Location = new Point(807, -9);
+            rebindLabel.Parent = bindPicBox;
+            rebindLabel.Location = new Point(257, 8);
 
             settingPicBox.Image = null;
             settingPicBox.Image = Properties.Resources.btn_setting;
@@ -222,13 +242,16 @@ namespace PCHelper
         private void changePanelVisable(bool pcPanelVisable, bool cloudPanelVisable, bool keyPanelVisable)
         {
             this.pcPanel.Visible = pcPanelVisable;
+            this.keyPanel.Visible = keyPanelVisable;
             if (connectedToShowkey && cloudPanelVisable)
             {
-                this.cloudPanel.Visible = cloudPanelVisable;
+                this.cloudPanel.Visible = true;
+                this.cloudPanel0.Visible = false;
             }
             else
             {
-                this.cloudPanel0.Visible = cloudPanelVisable;
+                this.cloudPanel.Visible = false;
+                this.cloudPanel0.Visible = true;
             }
             if (cloudPanelVisable)
             {
@@ -422,6 +445,38 @@ namespace PCHelper
         private void settingPicBox_MouseLeave(object sender, EventArgs e)
         {
             this.settingPicBox.Image = Properties.Resources.btn_setting;
+        }
+
+        private void tianmaoPicBox_MouseHover(object sender, EventArgs e)
+        {
+            this.tianmaoPicBox.Image = Properties.Resources.btn_tianmao_pressed;
+        }
+
+        private void tianmaoPicBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.tianmaoPicBox.Image = Properties.Resources.btn_tianmao;
+        }
+
+        private void tianmaoPicBox_Click(object sender, EventArgs e)
+        {
+            RegistryKey key = Registry.ClassesRoot.OpenSubKey(@"http\shell\open\command\"); 
+            string s = key.GetValue("").ToString(); 
+ 
+            Regex reg = new Regex("\"([^\"]+)\""); 
+            MatchCollection matchs = reg.Matches(s); 
+ 
+            string filename=""; 
+            if (matchs.Count > 0)
+            { 
+                filename = matchs[0].Groups[1].Value;
+                System.Diagnostics.Process.Start(filename, "http://detail.tmall.com/item.htm?spm=a1z10.1.w5002-2393934093.3.11H9cs&id=18823181677&bucket_id=190"); 
+            } 
+        }
+
+        private void rebindLabel_Click(object sender, EventArgs e)
+        {
+            connectedToShowkey = false;
+            changePanelVisable(false, true, false);
         }
     }
 }

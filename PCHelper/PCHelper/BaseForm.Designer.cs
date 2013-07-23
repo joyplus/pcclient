@@ -40,8 +40,8 @@
             this.pushListPicBox = new System.Windows.Forms.PictureBox();
             this.pinTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.unbindedLabel = new System.Windows.Forms.Label();
+            this.unbindPicBox = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -77,6 +77,14 @@
             this.headerPicture = new System.Windows.Forms.PictureBox();
             this.menuBgPic = new System.Windows.Forms.PictureBox();
             this.settingPicBox = new System.Windows.Forms.PictureBox();
+            this.keyPanel = new System.Windows.Forms.Panel();
+            this.tianmaoPicBox = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.bindPicBox = new System.Windows.Forms.PictureBox();
+            this.bindLabel = new System.Windows.Forms.Label();
+            this.bindPushLabel = new System.Windows.Forms.Label();
+            this.bindPushPicBox = new System.Windows.Forms.PictureBox();
+            this.rebindLabel = new System.Windows.Forms.Label();
             this.pcPanel.SuspendLayout();
             this.cloudPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pushPicBox)).BeginInit();
@@ -84,7 +92,7 @@
             this.cloudPanel0.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pushListPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unbindPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sendPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yunIcon)).BeginInit();
@@ -107,12 +115,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.headerPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuBgPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.settingPicBox)).BeginInit();
+            this.keyPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tianmaoPicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindPicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindPushPicBox)).BeginInit();
             this.SuspendLayout();
             // 
             // pcPanel
             // 
             this.pcPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pcPanel.Controls.Add(this.cloudPanel);
             this.pcPanel.Controls.Add(this.label4);
             this.pcPanel.Controls.Add(this.label1);
             this.pcPanel.Controls.Add(this.addLabe);
@@ -120,7 +132,7 @@
             this.pcPanel.Controls.Add(this.sharePicBox);
             this.pcPanel.Controls.Add(this.pictureBox6);
             this.pcPanel.Controls.Add(this.pictureBox5);
-            this.pcPanel.Location = new System.Drawing.Point(20, 125);
+            this.pcPanel.Location = new System.Drawing.Point(824, 39);
             this.pcPanel.Name = "pcPanel";
             this.pcPanel.Size = new System.Drawing.Size(900, 446);
             this.pcPanel.TabIndex = 5;
@@ -128,10 +140,14 @@
             // cloudPanel
             // 
             this.cloudPanel.BackColor = System.Drawing.Color.White;
+            this.cloudPanel.Controls.Add(this.rebindLabel);
+            this.cloudPanel.Controls.Add(this.bindPushLabel);
+            this.cloudPanel.Controls.Add(this.bindPushPicBox);
+            this.cloudPanel.Controls.Add(this.bindLabel);
+            this.cloudPanel.Controls.Add(this.bindPicBox);
             this.cloudPanel.Controls.Add(this.pushPicBox);
             this.cloudPanel.Controls.Add(this.addressTextBox);
             this.cloudPanel.Controls.Add(this.pictureBox11);
-            this.cloudPanel.Controls.Add(this.cloudPanel0);
             this.cloudPanel.Controls.Add(this.label6);
             this.cloudPanel.Controls.Add(this.label5);
             this.cloudPanel.Controls.Add(this.sendPicBox);
@@ -140,7 +156,7 @@
             this.cloudPanel.Controls.Add(this.yunIcon);
             this.cloudPanel.Controls.Add(this.tuiIcon);
             this.cloudPanel.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cloudPanel.Location = new System.Drawing.Point(60, 0);
+            this.cloudPanel.Location = new System.Drawing.Point(29, 52);
             this.cloudPanel.Name = "cloudPanel";
             this.cloudPanel.Size = new System.Drawing.Size(900, 446);
             this.cloudPanel.TabIndex = 4;
@@ -180,19 +196,22 @@
             // 
             // cloudPanel0
             // 
+            this.cloudPanel0.BackColor = System.Drawing.Color.White;
+            this.cloudPanel0.Controls.Add(this.pcPanel);
+            this.cloudPanel0.Controls.Add(this.cloudPanel);
             this.cloudPanel0.Controls.Add(this.webShowkeyLabel);
             this.cloudPanel0.Controls.Add(this.pushListLabel);
             this.cloudPanel0.Controls.Add(this.pushListPicBox);
             this.cloudPanel0.Controls.Add(this.pinTextBox);
             this.cloudPanel0.Controls.Add(this.pictureBox10);
-            this.cloudPanel0.Controls.Add(this.label10);
-            this.cloudPanel0.Controls.Add(this.pictureBox9);
+            this.cloudPanel0.Controls.Add(this.unbindedLabel);
+            this.cloudPanel0.Controls.Add(this.unbindPicBox);
             this.cloudPanel0.Controls.Add(this.pictureBox1);
             this.cloudPanel0.Controls.Add(this.label9);
             this.cloudPanel0.Controls.Add(this.label8);
             this.cloudPanel0.Controls.Add(this.label7);
             this.cloudPanel0.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cloudPanel0.Location = new System.Drawing.Point(13, 0);
+            this.cloudPanel0.Location = new System.Drawing.Point(28, 0);
             this.cloudPanel0.Name = "cloudPanel0";
             this.cloudPanel0.Size = new System.Drawing.Size(900, 446);
             this.cloudPanel0.TabIndex = 8;
@@ -227,6 +246,7 @@
             // 
             // pushListPicBox
             // 
+            this.pushListPicBox.BackColor = System.Drawing.Color.Transparent;
             this.pushListPicBox.Image = ((System.Drawing.Image)(resources.GetObject("pushListPicBox.Image")));
             this.pushListPicBox.Location = new System.Drawing.Point(791, 9);
             this.pushListPicBox.Name = "pushListPicBox";
@@ -259,24 +279,26 @@
             this.pictureBox10.TabIndex = 14;
             this.pictureBox10.TabStop = false;
             // 
-            // label10
+            // unbindedLabel
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DimGray;
-            this.label10.Location = new System.Drawing.Point(17, 7);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(103, 15);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "您的设备：未绑定";
+            this.unbindedLabel.AutoSize = true;
+            this.unbindedLabel.BackColor = System.Drawing.Color.Transparent;
+            this.unbindedLabel.Font = new System.Drawing.Font("Arial Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unbindedLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.unbindedLabel.Location = new System.Drawing.Point(17, 7);
+            this.unbindedLabel.Name = "unbindedLabel";
+            this.unbindedLabel.Size = new System.Drawing.Size(103, 15);
+            this.unbindedLabel.TabIndex = 13;
+            this.unbindedLabel.Text = "您的设备：未绑定";
             // 
-            // pictureBox9
+            // unbindPicBox
             // 
-            this.pictureBox9.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(900, 30);
-            this.pictureBox9.TabIndex = 12;
-            this.pictureBox9.TabStop = false;
+            this.unbindPicBox.BackColor = System.Drawing.Color.Gainsboro;
+            this.unbindPicBox.Location = new System.Drawing.Point(0, 0);
+            this.unbindPicBox.Name = "unbindPicBox";
+            this.unbindPicBox.Size = new System.Drawing.Size(900, 30);
+            this.unbindPicBox.TabIndex = 12;
+            this.unbindPicBox.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -651,7 +673,7 @@
             // 
             this.settingPicBox.BackColor = System.Drawing.Color.Transparent;
             this.settingPicBox.Image = global::PCHelper.Properties.Resources.btn_setting;
-            this.settingPicBox.Location = new System.Drawing.Point(813, 0);
+            this.settingPicBox.Location = new System.Drawing.Point(816, 0);
             this.settingPicBox.Name = "settingPicBox";
             this.settingPicBox.Size = new System.Drawing.Size(26, 23);
             this.settingPicBox.TabIndex = 18;
@@ -660,6 +682,102 @@
             this.settingPicBox.Click += new System.EventHandler(this.settingPicBox_Click);
             this.settingPicBox.MouseLeave += new System.EventHandler(this.settingPicBox_MouseLeave);
             this.settingPicBox.MouseHover += new System.EventHandler(this.settingPicBox_MouseHover);
+            // 
+            // keyPanel
+            // 
+            this.keyPanel.Controls.Add(this.cloudPanel0);
+            this.keyPanel.Controls.Add(this.tianmaoPicBox);
+            this.keyPanel.Controls.Add(this.pictureBox12);
+            this.keyPanel.Location = new System.Drawing.Point(3, 125);
+            this.keyPanel.Name = "keyPanel";
+            this.keyPanel.Size = new System.Drawing.Size(900, 446);
+            this.keyPanel.TabIndex = 19;
+            this.keyPanel.Visible = false;
+            // 
+            // tianmaoPicBox
+            // 
+            this.tianmaoPicBox.Image = global::PCHelper.Properties.Resources.btn_tianmao;
+            this.tianmaoPicBox.Location = new System.Drawing.Point(540, 300);
+            this.tianmaoPicBox.Name = "tianmaoPicBox";
+            this.tianmaoPicBox.Size = new System.Drawing.Size(306, 57);
+            this.tianmaoPicBox.TabIndex = 1;
+            this.tianmaoPicBox.TabStop = false;
+            this.tianmaoPicBox.Click += new System.EventHandler(this.tianmaoPicBox_Click);
+            this.tianmaoPicBox.MouseLeave += new System.EventHandler(this.tianmaoPicBox_MouseLeave);
+            this.tianmaoPicBox.MouseHover += new System.EventHandler(this.tianmaoPicBox_MouseHover);
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(900, 446);
+            this.pictureBox12.TabIndex = 0;
+            this.pictureBox12.TabStop = false;
+            // 
+            // bindPicBox
+            // 
+            this.bindPicBox.BackColor = System.Drawing.Color.Gainsboro;
+            this.bindPicBox.Location = new System.Drawing.Point(0, 0);
+            this.bindPicBox.Name = "bindPicBox";
+            this.bindPicBox.Size = new System.Drawing.Size(900, 30);
+            this.bindPicBox.TabIndex = 12;
+            this.bindPicBox.TabStop = false;
+            // 
+            // bindLabel
+            // 
+            this.bindLabel.AutoSize = true;
+            this.bindLabel.BackColor = System.Drawing.Color.Transparent;
+            this.bindLabel.Font = new System.Drawing.Font("Arial Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bindLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.bindLabel.Location = new System.Drawing.Point(17, 6);
+            this.bindLabel.Name = "bindLabel";
+            this.bindLabel.Size = new System.Drawing.Size(218, 15);
+            this.bindLabel.TabIndex = 13;
+            this.bindLabel.Text = "您的设备：Showkey J2S 192.168.0.1";
+            // 
+            // bindPushLabel
+            // 
+            this.bindPushLabel.AutoSize = true;
+            this.bindPushLabel.BackColor = System.Drawing.Color.Transparent;
+            this.bindPushLabel.Font = new System.Drawing.Font("Arial Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bindPushLabel.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.bindPushLabel.Location = new System.Drawing.Point(700, -7);
+            this.bindPushLabel.Name = "bindPushLabel";
+            this.bindPushLabel.Size = new System.Drawing.Size(75, 45);
+            this.bindPushLabel.TabIndex = 19;
+            this.bindPushLabel.Text = "\r\nShow推列表\r\n\r\n";
+            this.bindPushLabel.Click += new System.EventHandler(this.pushListPicBox_Click);
+            this.bindPushLabel.MouseLeave += new System.EventHandler(this.pushListPicBox_MouseLeave);
+            this.bindPushLabel.MouseHover += new System.EventHandler(this.pushListPicBox_MouseHover);
+            // 
+            // bindPushPicBox
+            // 
+            this.bindPushPicBox.BackColor = System.Drawing.Color.Transparent;
+            this.bindPushPicBox.Image = ((System.Drawing.Image)(resources.GetObject("bindPushPicBox.Image")));
+            this.bindPushPicBox.Location = new System.Drawing.Point(684, 11);
+            this.bindPushPicBox.Name = "bindPushPicBox";
+            this.bindPushPicBox.Size = new System.Drawing.Size(13, 10);
+            this.bindPushPicBox.TabIndex = 18;
+            this.bindPushPicBox.TabStop = false;
+            this.bindPushPicBox.Click += new System.EventHandler(this.pushListPicBox_Click);
+            this.bindPushPicBox.MouseLeave += new System.EventHandler(this.pushListPicBox_MouseLeave);
+            this.bindPushPicBox.MouseHover += new System.EventHandler(this.pushListPicBox_MouseHover);
+            // 
+            // rebindLabel
+            // 
+            this.rebindLabel.AutoSize = true;
+            this.rebindLabel.BackColor = System.Drawing.Color.Transparent;
+            this.rebindLabel.Font = new System.Drawing.Font("Arial Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rebindLabel.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.rebindLabel.Location = new System.Drawing.Point(300, 7);
+            this.rebindLabel.Name = "rebindLabel";
+            this.rebindLabel.Size = new System.Drawing.Size(55, 15);
+            this.rebindLabel.TabIndex = 20;
+            this.rebindLabel.Text = "重新绑定";
+            this.rebindLabel.Click += new System.EventHandler(this.rebindLabel_Click);
+            this.rebindLabel.MouseLeave += new System.EventHandler(this.pushListPicBox_MouseLeave);
+            this.rebindLabel.MouseHover += new System.EventHandler(this.pushListPicBox_MouseHover);
             // 
             // BaseForm
             // 
@@ -678,12 +796,12 @@
             this.Controls.Add(this.bottomPicBox);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pcPanel);
             this.Controls.Add(this.pictureBox_Close);
             this.Controls.Add(this.pictureBox_Min);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.headerPicture);
             this.Controls.Add(this.menuBgPic);
+            this.Controls.Add(this.keyPanel);
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BaseForm";
@@ -701,7 +819,7 @@
             this.cloudPanel0.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pushListPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unbindPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sendPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.yunIcon)).EndInit();
@@ -724,6 +842,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.headerPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuBgPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.settingPicBox)).EndInit();
+            this.keyPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tianmaoPicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindPicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindPushPicBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -765,8 +888,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel cloudPanel0;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Label unbindedLabel;
+        private System.Windows.Forms.PictureBox unbindPicBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -779,6 +902,14 @@
         private System.Windows.Forms.PictureBox pushListPicBox;
         private System.Windows.Forms.Label webShowkeyLabel;
         private System.Windows.Forms.PictureBox settingPicBox;
+        private System.Windows.Forms.Panel keyPanel;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox tianmaoPicBox;
+        private System.Windows.Forms.Label bindPushLabel;
+        private System.Windows.Forms.PictureBox bindPushPicBox;
+        private System.Windows.Forms.Label bindLabel;
+        private System.Windows.Forms.PictureBox bindPicBox;
+        private System.Windows.Forms.Label rebindLabel;
     }
 }
 

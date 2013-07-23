@@ -216,6 +216,20 @@ namespace PCHelper.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap btn_tianmao {
+            get {
+                object obj = ResourceManager.GetObject("btn_tianmao", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap btn_tianmao_pressed {
+            get {
+                object obj = ResourceManager.GetObject("btn_tianmao_pressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap img_sep {
             get {
                 object obj = ResourceManager.GetObject("img_sep", resourceCulture);
