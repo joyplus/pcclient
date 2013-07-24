@@ -152,8 +152,7 @@ namespace UpdateDemo
 
         private void OnDownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-         //   progbar_single.Value = e.ProgressPercentage;
-         //   lbl_singleInfo.Text = "已下载" + e.BytesReceived + "字节/总计" + e.TotalBytesToReceive + "字节";//一个label框，用来显示当前下载的数据
+            downloadProgressBar.Value = (int)(e.BytesReceived * 100 / e.TotalBytesToReceive);
         }
         private void OnDownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
@@ -169,6 +168,8 @@ namespace UpdateDemo
             }
             System.Diagnostics.Process.Start(filename, "");
             WriteInfo(VERSION_REGISTER_KEY, latestVersion);
+            this.downloadProgressBar.Visible = false;
+            this.updateBtn.Visible = false;
             checkingLabel.Text = Properties.Resources.LATEST_VERSION_LABEL;
         }
 
@@ -350,7 +351,7 @@ namespace UpdateDemo
             if (needUpdate)
             {
                 checkingLabel.Text = "发现最新版本！版本号：" + latestVersion;
-                updateBtn.Visible = true;         
+                updateBtn.Visible = true;    
             }
             else
             {
@@ -405,6 +406,7 @@ namespace UpdateDemo
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
+            this.downloadProgressBar.Visible = true;
             triggerUpdate();
         }
     }

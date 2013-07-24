@@ -30,10 +30,29 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseForm));
             this.pcPanel = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.addLabe = new System.Windows.Forms.Label();
+            this.noShareLabel = new System.Windows.Forms.Label();
+            this.sharePicBox = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.cloudPanel = new System.Windows.Forms.Panel();
+            this.rebindLabel = new System.Windows.Forms.Label();
+            this.bindPushLabel = new System.Windows.Forms.Label();
+            this.bindPushPicBox = new System.Windows.Forms.PictureBox();
+            this.bindLabel = new System.Windows.Forms.Label();
+            this.bindPicBox = new System.Windows.Forms.PictureBox();
             this.pushPicBox = new System.Windows.Forms.PictureBox();
             this.addressTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.sendPicBox = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.yunIcon = new System.Windows.Forms.PictureBox();
+            this.tuiIcon = new System.Windows.Forms.PictureBox();
             this.cloudPanel0 = new System.Windows.Forms.Panel();
             this.webShowkeyLabel = new System.Windows.Forms.Label();
             this.pushListLabel = new System.Windows.Forms.Label();
@@ -46,20 +65,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.sendPicBox = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.yunIcon = new System.Windows.Forms.PictureBox();
-            this.tuiIcon = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.addLabe = new System.Windows.Forms.Label();
-            this.noShareLabel = new System.Windows.Forms.Label();
-            this.sharePicBox = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.versionLabel = new System.Windows.Forms.Label();
             this.commentLabel = new System.Windows.Forms.Label();
             this.pcPictureBox = new System.Windows.Forms.PictureBox();
@@ -80,26 +85,23 @@
             this.keyPanel = new System.Windows.Forms.Panel();
             this.tianmaoPicBox = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.bindPicBox = new System.Windows.Forms.PictureBox();
-            this.bindLabel = new System.Windows.Forms.Label();
-            this.bindPushLabel = new System.Windows.Forms.Label();
-            this.bindPushPicBox = new System.Windows.Forms.PictureBox();
-            this.rebindLabel = new System.Windows.Forms.Label();
             this.pcPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sharePicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.cloudPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindPushPicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pushPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sendPicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yunIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tuiIcon)).BeginInit();
             this.cloudPanel0.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pushListPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unbindPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sendPicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yunIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tuiIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sharePicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cloudPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.keyPictureBox)).BeginInit();
@@ -118,8 +120,6 @@
             this.keyPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tianmaoPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindPicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindPushPicBox)).BeginInit();
             this.SuspendLayout();
             // 
             // pcPanel
@@ -132,10 +132,86 @@
             this.pcPanel.Controls.Add(this.sharePicBox);
             this.pcPanel.Controls.Add(this.pictureBox6);
             this.pcPanel.Controls.Add(this.pictureBox5);
-            this.pcPanel.Location = new System.Drawing.Point(824, 39);
+            this.pcPanel.Location = new System.Drawing.Point(628, 49);
             this.pcPanel.Name = "pcPanel";
             this.pcPanel.Size = new System.Drawing.Size(900, 446);
             this.pcPanel.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(106, 242);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(236, 76);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "现在您只需三步\r\n1. 设置您需要看片的目录地址\r\n2. 在电视上安装Showkey电视助手\r\n3. 看大片";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(107, 163);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(266, 57);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "电脑里的高清大片还在静静地躺着？\r\n觉得电脑屏幕太小？\r\nShowkey电视助手帮你实现PC屏转大屏";
+            // 
+            // addLabe
+            // 
+            this.addLabe.AutoSize = true;
+            this.addLabe.BackColor = System.Drawing.Color.Transparent;
+            this.addLabe.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addLabe.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.addLabe.Location = new System.Drawing.Point(190, 84);
+            this.addLabe.Name = "addLabe";
+            this.addLabe.Size = new System.Drawing.Size(65, 19);
+            this.addLabe.TabIndex = 10;
+            this.addLabe.Text = "手动添加";
+            // 
+            // noShareLabel
+            // 
+            this.noShareLabel.AutoSize = true;
+            this.noShareLabel.BackColor = System.Drawing.Color.Transparent;
+            this.noShareLabel.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noShareLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.noShareLabel.Location = new System.Drawing.Point(190, 47);
+            this.noShareLabel.Name = "noShareLabel";
+            this.noShareLabel.Size = new System.Drawing.Size(299, 30);
+            this.noShareLabel.TabIndex = 9;
+            this.noShareLabel.Text = "你还没有给电视共享任何目录";
+            // 
+            // sharePicBox
+            // 
+            this.sharePicBox.BackColor = System.Drawing.Color.Transparent;
+            this.sharePicBox.Image = global::PCHelper.Properties.Resources.btn_share;
+            this.sharePicBox.Location = new System.Drawing.Point(621, 47);
+            this.sharePicBox.Name = "sharePicBox";
+            this.sharePicBox.Size = new System.Drawing.Size(156, 52);
+            this.sharePicBox.TabIndex = 7;
+            this.sharePicBox.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(574, 145);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(256, 220);
+            this.pictureBox6.TabIndex = 6;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(111, 47);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox5.TabIndex = 5;
+            this.pictureBox5.TabStop = false;
             // 
             // cloudPanel
             // 
@@ -161,6 +237,70 @@
             this.cloudPanel.Size = new System.Drawing.Size(900, 446);
             this.cloudPanel.TabIndex = 4;
             this.cloudPanel.Visible = false;
+            // 
+            // rebindLabel
+            // 
+            this.rebindLabel.AutoSize = true;
+            this.rebindLabel.BackColor = System.Drawing.Color.Transparent;
+            this.rebindLabel.Font = new System.Drawing.Font("Arial Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rebindLabel.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.rebindLabel.Location = new System.Drawing.Point(300, 7);
+            this.rebindLabel.Name = "rebindLabel";
+            this.rebindLabel.Size = new System.Drawing.Size(55, 15);
+            this.rebindLabel.TabIndex = 20;
+            this.rebindLabel.Text = "重新绑定";
+            this.rebindLabel.Click += new System.EventHandler(this.rebindLabel_Click);
+            this.rebindLabel.MouseLeave += new System.EventHandler(this.pushListPicBox_MouseLeave);
+            this.rebindLabel.MouseHover += new System.EventHandler(this.pushListPicBox_MouseHover);
+            // 
+            // bindPushLabel
+            // 
+            this.bindPushLabel.AutoSize = true;
+            this.bindPushLabel.BackColor = System.Drawing.Color.Transparent;
+            this.bindPushLabel.Font = new System.Drawing.Font("Arial Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bindPushLabel.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.bindPushLabel.Location = new System.Drawing.Point(700, -7);
+            this.bindPushLabel.Name = "bindPushLabel";
+            this.bindPushLabel.Size = new System.Drawing.Size(75, 45);
+            this.bindPushLabel.TabIndex = 19;
+            this.bindPushLabel.Text = "\r\nShow推列表\r\n\r\n";
+            this.bindPushLabel.Click += new System.EventHandler(this.pushListPicBox_Click);
+            this.bindPushLabel.MouseLeave += new System.EventHandler(this.pushListPicBox_MouseLeave);
+            this.bindPushLabel.MouseHover += new System.EventHandler(this.pushListPicBox_MouseHover);
+            // 
+            // bindPushPicBox
+            // 
+            this.bindPushPicBox.BackColor = System.Drawing.Color.Transparent;
+            this.bindPushPicBox.Image = ((System.Drawing.Image)(resources.GetObject("bindPushPicBox.Image")));
+            this.bindPushPicBox.Location = new System.Drawing.Point(684, 11);
+            this.bindPushPicBox.Name = "bindPushPicBox";
+            this.bindPushPicBox.Size = new System.Drawing.Size(13, 10);
+            this.bindPushPicBox.TabIndex = 18;
+            this.bindPushPicBox.TabStop = false;
+            this.bindPushPicBox.Click += new System.EventHandler(this.pushListPicBox_Click);
+            this.bindPushPicBox.MouseLeave += new System.EventHandler(this.pushListPicBox_MouseLeave);
+            this.bindPushPicBox.MouseHover += new System.EventHandler(this.pushListPicBox_MouseHover);
+            // 
+            // bindLabel
+            // 
+            this.bindLabel.AutoSize = true;
+            this.bindLabel.BackColor = System.Drawing.Color.Transparent;
+            this.bindLabel.Font = new System.Drawing.Font("Arial Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bindLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.bindLabel.Location = new System.Drawing.Point(17, 6);
+            this.bindLabel.Name = "bindLabel";
+            this.bindLabel.Size = new System.Drawing.Size(218, 15);
+            this.bindLabel.TabIndex = 13;
+            this.bindLabel.Text = "您的设备：Showkey J2S 192.168.0.1";
+            // 
+            // bindPicBox
+            // 
+            this.bindPicBox.BackColor = System.Drawing.Color.Gainsboro;
+            this.bindPicBox.Location = new System.Drawing.Point(0, 0);
+            this.bindPicBox.Name = "bindPicBox";
+            this.bindPicBox.Size = new System.Drawing.Size(900, 30);
+            this.bindPicBox.TabIndex = 12;
+            this.bindPicBox.TabStop = false;
             // 
             // pushPicBox
             // 
@@ -193,6 +333,80 @@
             this.pictureBox11.Size = new System.Drawing.Size(300, 40);
             this.pictureBox11.TabIndex = 9;
             this.pictureBox11.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Location = new System.Drawing.Point(234, 291);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(576, 19);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "目前支持优酷、爱奇艺、腾讯、乐视、搜狐、M1905电影网以及网络文件地址和直播员地址";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(232, 258);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(123, 30);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "视频云推送";
+            // 
+            // sendPicBox
+            // 
+            this.sendPicBox.Image = global::PCHelper.Properties.Resources.btn_send;
+            this.sendPicBox.Location = new System.Drawing.Point(237, 163);
+            this.sendPicBox.Name = "sendPicBox";
+            this.sendPicBox.Size = new System.Drawing.Size(300, 40);
+            this.sendPicBox.TabIndex = 4;
+            this.sendPicBox.TabStop = false;
+            this.sendPicBox.Click += new System.EventHandler(this.sendPicBox_Click);
+            this.sendPicBox.MouseLeave += new System.EventHandler(this.sendPicBox_MouseLeave);
+            this.sendPicBox.MouseHover += new System.EventHandler(this.sendPicBox_MouseHover);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(233, 114);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(336, 19);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "电视应用安装神器，指定APK后，即可在电视上安装";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(232, 84);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 30);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Show推";
+            // 
+            // yunIcon
+            // 
+            this.yunIcon.Image = ((System.Drawing.Image)(resources.GetObject("yunIcon.Image")));
+            this.yunIcon.Location = new System.Drawing.Point(57, 242);
+            this.yunIcon.Name = "yunIcon";
+            this.yunIcon.Size = new System.Drawing.Size(140, 140);
+            this.yunIcon.TabIndex = 1;
+            this.yunIcon.TabStop = false;
+            // 
+            // tuiIcon
+            // 
+            this.tuiIcon.Image = ((System.Drawing.Image)(resources.GetObject("tuiIcon.Image")));
+            this.tuiIcon.Location = new System.Drawing.Point(55, 75);
+            this.tuiIcon.Name = "tuiIcon";
+            this.tuiIcon.Size = new System.Drawing.Size(140, 140);
+            this.tuiIcon.TabIndex = 0;
+            this.tuiIcon.TabStop = false;
             // 
             // cloudPanel0
             // 
@@ -342,156 +556,6 @@
             this.label7.Size = new System.Drawing.Size(183, 33);
             this.label7.TabIndex = 0;
             this.label7.Text = "欢迎使用云服务";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(234, 291);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(576, 19);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "目前支持优酷、爱奇艺、腾讯、乐视、搜狐、M1905电影网以及网络文件地址和直播员地址";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(232, 258);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 30);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "视频云推送";
-            // 
-            // sendPicBox
-            // 
-            this.sendPicBox.Image = global::PCHelper.Properties.Resources.btn_send;
-            this.sendPicBox.Location = new System.Drawing.Point(237, 163);
-            this.sendPicBox.Name = "sendPicBox";
-            this.sendPicBox.Size = new System.Drawing.Size(300, 40);
-            this.sendPicBox.TabIndex = 4;
-            this.sendPicBox.TabStop = false;
-            this.sendPicBox.Click += new System.EventHandler(this.sendPicBox_Click);
-            this.sendPicBox.MouseLeave += new System.EventHandler(this.sendPicBox_MouseLeave);
-            this.sendPicBox.MouseHover += new System.EventHandler(this.sendPicBox_MouseHover);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(233, 114);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(336, 19);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "电视应用安装神器，指定APK后，即可在电视上安装";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(232, 84);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 30);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Show推";
-            // 
-            // yunIcon
-            // 
-            this.yunIcon.Image = ((System.Drawing.Image)(resources.GetObject("yunIcon.Image")));
-            this.yunIcon.Location = new System.Drawing.Point(57, 242);
-            this.yunIcon.Name = "yunIcon";
-            this.yunIcon.Size = new System.Drawing.Size(140, 140);
-            this.yunIcon.TabIndex = 1;
-            this.yunIcon.TabStop = false;
-            // 
-            // tuiIcon
-            // 
-            this.tuiIcon.Image = ((System.Drawing.Image)(resources.GetObject("tuiIcon.Image")));
-            this.tuiIcon.Location = new System.Drawing.Point(55, 75);
-            this.tuiIcon.Name = "tuiIcon";
-            this.tuiIcon.Size = new System.Drawing.Size(140, 140);
-            this.tuiIcon.TabIndex = 0;
-            this.tuiIcon.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(106, 242);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(236, 76);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "现在您只需三步\r\n1. 设置您需要看片的目录地址\r\n2. 在电视上安装Showkey电视助手\r\n3. 看大片";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(107, 163);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(266, 57);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "电脑里的高清大片还在静静地躺着？\r\n觉得电脑屏幕太小？\r\nShowkey电视助手帮你实现PC屏转大屏";
-            // 
-            // addLabe
-            // 
-            this.addLabe.AutoSize = true;
-            this.addLabe.BackColor = System.Drawing.Color.Transparent;
-            this.addLabe.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addLabe.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.addLabe.Location = new System.Drawing.Point(190, 84);
-            this.addLabe.Name = "addLabe";
-            this.addLabe.Size = new System.Drawing.Size(65, 19);
-            this.addLabe.TabIndex = 10;
-            this.addLabe.Text = "手动添加";
-            // 
-            // noShareLabel
-            // 
-            this.noShareLabel.AutoSize = true;
-            this.noShareLabel.BackColor = System.Drawing.Color.Transparent;
-            this.noShareLabel.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noShareLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.noShareLabel.Location = new System.Drawing.Point(190, 47);
-            this.noShareLabel.Name = "noShareLabel";
-            this.noShareLabel.Size = new System.Drawing.Size(299, 30);
-            this.noShareLabel.TabIndex = 9;
-            this.noShareLabel.Text = "你还没有给电视共享任何目录";
-            // 
-            // sharePicBox
-            // 
-            this.sharePicBox.BackColor = System.Drawing.Color.Transparent;
-            this.sharePicBox.Image = global::PCHelper.Properties.Resources.btn_share;
-            this.sharePicBox.Location = new System.Drawing.Point(621, 47);
-            this.sharePicBox.Name = "sharePicBox";
-            this.sharePicBox.Size = new System.Drawing.Size(156, 52);
-            this.sharePicBox.TabIndex = 7;
-            this.sharePicBox.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(574, 145);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(256, 220);
-            this.pictureBox6.TabIndex = 6;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(111, 47);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox5.TabIndex = 5;
-            this.pictureBox5.TabStop = false;
             // 
             // versionLabel
             // 
@@ -715,70 +779,6 @@
             this.pictureBox12.TabIndex = 0;
             this.pictureBox12.TabStop = false;
             // 
-            // bindPicBox
-            // 
-            this.bindPicBox.BackColor = System.Drawing.Color.Gainsboro;
-            this.bindPicBox.Location = new System.Drawing.Point(0, 0);
-            this.bindPicBox.Name = "bindPicBox";
-            this.bindPicBox.Size = new System.Drawing.Size(900, 30);
-            this.bindPicBox.TabIndex = 12;
-            this.bindPicBox.TabStop = false;
-            // 
-            // bindLabel
-            // 
-            this.bindLabel.AutoSize = true;
-            this.bindLabel.BackColor = System.Drawing.Color.Transparent;
-            this.bindLabel.Font = new System.Drawing.Font("Arial Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bindLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.bindLabel.Location = new System.Drawing.Point(17, 6);
-            this.bindLabel.Name = "bindLabel";
-            this.bindLabel.Size = new System.Drawing.Size(218, 15);
-            this.bindLabel.TabIndex = 13;
-            this.bindLabel.Text = "您的设备：Showkey J2S 192.168.0.1";
-            // 
-            // bindPushLabel
-            // 
-            this.bindPushLabel.AutoSize = true;
-            this.bindPushLabel.BackColor = System.Drawing.Color.Transparent;
-            this.bindPushLabel.Font = new System.Drawing.Font("Arial Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bindPushLabel.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.bindPushLabel.Location = new System.Drawing.Point(700, -7);
-            this.bindPushLabel.Name = "bindPushLabel";
-            this.bindPushLabel.Size = new System.Drawing.Size(75, 45);
-            this.bindPushLabel.TabIndex = 19;
-            this.bindPushLabel.Text = "\r\nShow推列表\r\n\r\n";
-            this.bindPushLabel.Click += new System.EventHandler(this.pushListPicBox_Click);
-            this.bindPushLabel.MouseLeave += new System.EventHandler(this.pushListPicBox_MouseLeave);
-            this.bindPushLabel.MouseHover += new System.EventHandler(this.pushListPicBox_MouseHover);
-            // 
-            // bindPushPicBox
-            // 
-            this.bindPushPicBox.BackColor = System.Drawing.Color.Transparent;
-            this.bindPushPicBox.Image = ((System.Drawing.Image)(resources.GetObject("bindPushPicBox.Image")));
-            this.bindPushPicBox.Location = new System.Drawing.Point(684, 11);
-            this.bindPushPicBox.Name = "bindPushPicBox";
-            this.bindPushPicBox.Size = new System.Drawing.Size(13, 10);
-            this.bindPushPicBox.TabIndex = 18;
-            this.bindPushPicBox.TabStop = false;
-            this.bindPushPicBox.Click += new System.EventHandler(this.pushListPicBox_Click);
-            this.bindPushPicBox.MouseLeave += new System.EventHandler(this.pushListPicBox_MouseLeave);
-            this.bindPushPicBox.MouseHover += new System.EventHandler(this.pushListPicBox_MouseHover);
-            // 
-            // rebindLabel
-            // 
-            this.rebindLabel.AutoSize = true;
-            this.rebindLabel.BackColor = System.Drawing.Color.Transparent;
-            this.rebindLabel.Font = new System.Drawing.Font("Arial Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rebindLabel.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.rebindLabel.Location = new System.Drawing.Point(300, 7);
-            this.rebindLabel.Name = "rebindLabel";
-            this.rebindLabel.Size = new System.Drawing.Size(55, 15);
-            this.rebindLabel.TabIndex = 20;
-            this.rebindLabel.Text = "重新绑定";
-            this.rebindLabel.Click += new System.EventHandler(this.rebindLabel_Click);
-            this.rebindLabel.MouseLeave += new System.EventHandler(this.pushListPicBox_MouseLeave);
-            this.rebindLabel.MouseHover += new System.EventHandler(this.pushListPicBox_MouseHover);
-            // 
             // BaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -811,22 +811,24 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.control_MouseDown);
             this.pcPanel.ResumeLayout(false);
             this.pcPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sharePicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.cloudPanel.ResumeLayout(false);
             this.cloudPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindPushPicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pushPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sendPicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yunIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tuiIcon)).EndInit();
             this.cloudPanel0.ResumeLayout(false);
             this.cloudPanel0.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pushListPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unbindPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sendPicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yunIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tuiIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sharePicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cloudPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.keyPictureBox)).EndInit();
@@ -845,8 +847,6 @@
             this.keyPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tianmaoPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindPicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindPushPicBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

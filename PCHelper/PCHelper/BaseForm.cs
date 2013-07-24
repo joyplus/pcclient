@@ -27,6 +27,8 @@ namespace PCHelper
         private string addressContent;
         private bool connectedToShowkey;
         private string UPDATE_PROGRAM_NAME = "SettingsForm.exe";
+        private string VERSION_REGISTER_KEY = "joyplus_pcclient_version_key";
+        private string versionString;
         Process updateProcess;
 
         public BaseForm()
@@ -82,6 +84,9 @@ namespace PCHelper
             pictureBox_Min.Image = Properties.Resources.btn_min;
             pictureBox_Close.Image = null;
             pictureBox_Close.Image = Properties.Resources.btn_close;
+
+            versionString = ReadInfo(VERSION_REGISTER_KEY);
+            versionLabel.Text = "版本：" + versionString;
         }
 
         #region  设置窗体的最大化、最小化和关闭按钮的单击事件
@@ -477,6 +482,31 @@ namespace PCHelper
         {
             connectedToShowkey = false;
             changePanelVisable(false, true, false);
+        }
+
+        private string m_companyname = "Joyplus", m_softwarename = "PCClient";
+        private string ReadInfo(string p_KeyName)
+        {
+            RegistryKey SoftwareKey = Registry.LocalMachine.OpenSubKey("Software", true);
+            RegistryKey CompanyKey = SoftwareKey.OpenSubKey(m_companyname);
+            string strValue = "";
+
+            if (CompanyKey == null)
+                return "";
+            RegistryKey SoftwareNameKey = CompanyKey.OpenSubKey(m_softwarename);//建立
+            if (SoftwareNameKey == null)
+                return "";
+
+            try
+            {
+                strValue = SoftwareNameKey.GetValue(p_KeyName).ToString().Trim();
+            }
+            catch
+            { }
+
+            if (strValue == null)
+                strValue = "";
+            return strValue;
         }
     }
 }

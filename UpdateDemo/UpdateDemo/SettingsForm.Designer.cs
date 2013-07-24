@@ -54,6 +54,7 @@
             this.aboutusPanel = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.downloadProgressBar = new System.Windows.Forms.ProgressBar();
             this.regularPanel.SuspendLayout();
             this.updatePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.updateBtn)).BeginInit();
@@ -214,6 +215,7 @@
             // 
             // updatePanel
             // 
+            this.updatePanel.Controls.Add(this.downloadProgressBar);
             this.updatePanel.Controls.Add(this.updateBtn);
             this.updatePanel.Controls.Add(this.checkingLabel);
             this.updatePanel.Location = new System.Drawing.Point(188, 30);
@@ -323,6 +325,14 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
+            // downloadProgressBar
+            // 
+            this.downloadProgressBar.Location = new System.Drawing.Point(154, 157);
+            this.downloadProgressBar.Name = "downloadProgressBar";
+            this.downloadProgressBar.Size = new System.Drawing.Size(124, 19);
+            this.downloadProgressBar.TabIndex = 2;
+            this.downloadProgressBar.Visible = false;
+            // 
             // UpdateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -390,6 +400,7 @@
         private System.Windows.Forms.Panel aboutusPanel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ProgressBar downloadProgressBar;
     }
 }
 
