@@ -44,6 +44,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,6 +61,29 @@
     <Compile Include="BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DefineTreeView\ExplorerTreeViewWnd.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DefineTreeView\ShellAPI.cs" />
+    <Compile Include="DefineTreeView\ShellItem.cs" />
+    <Compile Include="DefineTreeView\SystemImageList.cs" />
+    <Compile Include="ExplorerTreeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExplorerTreeView.Designer.cs">
+      <DependentUpon>ExplorerTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fileSrc\VideoFileInfo.cs" />
+    <Compile Include="ScanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScanForm.Designer.cs">
+      <DependentUpon>ScanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fileSrc\Const.cs" />
+    <Compile Include="fileSrc\DirectoryVideo.cs" />
+    <Compile Include="fileSrc\FileVideo.cs" />
+    <Compile Include="fileSrc\ShellGetFileInfo.cs" />
     <Compile Include="SendForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,8 +92,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TreeViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TreeViewForm.Designer.cs">
+      <DependentUpon>TreeViewForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExplorerTreeView.resx">
+      <DependentUpon>ExplorerTreeView.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,8 +115,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ScanForm.resx">
+      <DependentUpon>ScanForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SendForm.resx">
       <DependentUpon>SendForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreeViewForm.resx">
+      <DependentUpon>TreeViewForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -167,8 +207,18 @@
     <None Include="Resources\天猫.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="635102726426406250.ico" />
     <Content Include="ICON.ico" />
+    <None Include="Resources\Button_pressed1.png" />
+    <None Include="Resources\Button1.png" />
+    <None Include="Resources\Button_pressed.png" />
+    <None Include="Resources\Button.png" />
+    <None Include="Resources\Scanning1.png" />
+    <None Include="Resources\Scan1.png" />
+    <None Include="Resources\Scanning_pressed.png" />
+    <None Include="Resources\Scanning.png" />
+    <None Include="Resources\Scan_pressed.png" />
+    <None Include="Resources\Scan.png" />
+    <None Include="Resources\headerPicBox.Image.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

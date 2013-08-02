@@ -10,6 +10,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
+using System.Windows.Forms.Samples;
 using Microsoft.Win32; 
 
 namespace PCHelper
@@ -26,10 +27,14 @@ namespace PCHelper
         private int SELECTED_INDEX = 0;
         private string addressContent;
         private bool connectedToShowkey;
+        private bool showPanelShare = false;
         private string UPDATE_PROGRAM_NAME = "SettingsForm.exe";
         private string VERSION_REGISTER_KEY = "joyplus_pcclient_version_key";
         private string versionString;
         Process updateProcess;
+        private DirectoryVideo _dir;
+
+        TreeViewForm treeviewForm = null;
 
         public BaseForm()
         {
@@ -61,6 +66,9 @@ namespace PCHelper
             cloudPanel0.Location = pcPanel.Location;
             keyPanel.Location = pcPanel.Location;
             sharePicBox.Parent = pcPanel;
+            
+            pcPanelShare.Parent = this;
+            pcPanelShare.Location = pcPanel.Location;
 
             unbindedLabel.Parent = unbindPicBox;
             unbindedLabel.Location = new Point(17, 7);
@@ -85,7 +93,8 @@ namespace PCHelper
             pictureBox_Close.Image = null;
             pictureBox_Close.Image = Properties.Resources.btn_close;
 
-            versionString = ReadInfo(VERSION_REGISTER_KEY);
+            //versionString = ReadInfo(VERSION_REGISTER_KEY);
+            versionString = "1.0.1";
             versionLabel.Text = "版本：" + versionString;
         }
 
@@ -159,6 +168,79 @@ namespace PCHelper
             }
         }
         #endregion
+
+        private void VideoFileLoad()
+        {
+            // Set Initial Directory to My Documents
+            _dir = new DirectoryVideo ( );
+            this.FileViewBindingSource.DataSource = _dir;
+
+            // Set Size column to right align
+            DataGridViewColumn col = this.dataGridView1.Columns["PathCol"];
+
+            if (null != col)
+            {
+                DataGridViewCellStyle style = col.HeaderCell.Style;
+
+                style.Padding = new Padding ( style.Padding.Left, style.Padding.Top, 6, style.Padding.Bottom );
+                style.Alignment = DataGridViewContentAlignment.MiddleRight;
+            }
+
+            // Select first item
+            col = this.dataGridView1.Columns["Name"];
+
+            if (null != col)
+            {
+                this.dataGridView1.Rows[0].Cells[col.Index].Selected = true;
+            }
+        }
+
+        private void dataGridView1_CellFormatting ( object sender, DataGridViewCellFormattingEventArgs e )
+        {
+            if (this.dataGridView1.Columns[e.ColumnIndex].Name == "PathCol")
+            {
+                e.Value = "C:\\Document";
+            }
+            else if (this.dataGridView1.Columns[e.ColumnIndex].Name == "VideoNumCol")
+            {
+                e.Value = "7";
+            }
+        }
+
+        private void dataGridView1_CellPainting ( object sender, DataGridViewCellPaintingEventArgs e )
+        {
+            Icon icon = (e.Value as Icon);
+
+            if (null != icon)
+            {
+                using (SolidBrush b = new SolidBrush ( e.CellStyle.BackColor ))
+                {
+                    e.Graphics.FillRectangle ( b, e.CellBounds );
+                }
+
+                // Draw right aligned icon (1 pixed padding)
+                e.Graphics.DrawIcon ( icon, e.CellBounds.Width - icon.Width - 1, e.CellBounds.Y + 1 );
+                e.Handled = true;
+            }
+        }
+
+        private void dataGridView1_RowPrePaint ( object sender, DataGridViewRowPrePaintEventArgs e )
+        {
+
+        }
+
+        private void dataGridView1_CellMouseDoubleClick ( object sender, DataGridViewCellMouseEventArgs e )
+        {
+            // Call Active on DirectoryView
+            try
+            {
+                _dir.Activate ( this.FileViewBindingSource[e.RowIndex] as FileVideo );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show ( ex.Message );
+            }
+        }
 
         private void pictureBox_Close_Click(object sender, EventArgs e)
         {
@@ -236,7 +318,7 @@ namespace PCHelper
             }
             else if (menuBtn.Name == "cloudPictureBox")
             {
-                changePanelVisable(false, true, false);
+                changePanelVisable ( false, true, false );
             }
             else if (menuBtn.Name == "keyPictureBox")
             {
@@ -248,15 +330,35 @@ namespace PCHelper
         {
             this.pcPanel.Visible = pcPanelVisable;
             this.keyPanel.Visible = keyPanelVisable;
-            if (connectedToShowkey && cloudPanelVisable)
+            if(pcPanelVisable)
             {
-                this.cloudPanel.Visible = true;
-                this.cloudPanel0.Visible = false;
+                if(showPanelShare)
+                {
+                    this.pcPanel.Visible = false;
+                    this.pcPanelShare.Visible = true;
+                    VideoFileLoad ( );
+                }
+                else
+                {
+                    this.pcPanelShare.Visible = false;
+                    this.pcPanel.Visible = true;
+                }
             }
-            else
-            {
+
+            if(cloudPanelVisable){
+                if (connectedToShowkey)
+                {
+                    this.cloudPanel.Visible = true;
+                    this.cloudPanel0.Visible = false;
+                }
+                else
+                {
+                    this.cloudPanel.Visible = false;
+                    this.cloudPanel0.Visible = true;
+                }
+            }else{
+                this.cloudPanel0.Visible = false;
                 this.cloudPanel.Visible = false;
-                this.cloudPanel0.Visible = true;
             }
             if (cloudPanelVisable)
             {
@@ -430,7 +532,7 @@ namespace PCHelper
 
         private void pushPicBox_Click(object sender, EventArgs e)
         {
-
+			
         }
 
         private void settingPicBox_Click(object sender, EventArgs e)
@@ -450,6 +552,19 @@ namespace PCHelper
         private void settingPicBox_MouseLeave(object sender, EventArgs e)
         {
             this.settingPicBox.Image = Properties.Resources.btn_setting;
+        }
+
+        private void addLabe_Click(object sender, EventArgs e)
+        {
+                treeviewForm = new TreeViewForm ( );
+                treeviewForm.ShowDialog ( );
+            
+        }
+
+        private void sharePicBox_Click(object sender, EventArgs e)
+        {
+            showPanelShare = true;
+            changePanelVisable ( true, false, false );
         }
 
         private void tianmaoPicBox_MouseHover(object sender, EventArgs e)
@@ -482,6 +597,18 @@ namespace PCHelper
         {
             connectedToShowkey = false;
             changePanelVisable(false, true, false);
+        }
+
+        private void StartScanBtn_Click(object sender, EventArgs e)
+        {
+            this.StartScanBtn.Visible = false;
+            this.StopScanBtn.Visible = true;
+        }
+
+        private void StopScanBtn_Click(object sender, EventArgs e)
+        {
+            this.StartScanBtn.Visible = true;
+            this.StopScanBtn.Visible = false;
         }
 
         private string m_companyname = "Joyplus", m_softwarename = "PCClient";
